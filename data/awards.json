@@ -1,0 +1,125 @@
+{
+    "pulitzer" : {
+        "name" : "Pulitzer Prize", 
+        "abbr" : "PUL",
+        "type" : "annual",
+        "list" : {
+            "AG-L"     : 2018, "CW-TUR"   : 2017, "VN-TS"    : 2016, "AD-AtLWC" : 2015, "DT-TG"    : 2014, "AJ-TOMS"  : 2013, "[NA2012]" : 2012, "JE-AVftG" : 2011, "PH-T"     : 2010,
+            "ES-OK"    : 2009, "JD-TBWLO" : 2008, "CM-TR"    : 2007, "GB-M"     : 2006, "MR-G"     : 2005, "EJ-TKW"   : 2004, "JE-M"     : 2003, "RR-EF"    : 2002, "MC-TAAoK" : 2001, "JL-IoM"   : 2000,
+            "MC-TH"    : 1999, "PR-AP"    : 1998, "SM-MDTTo" : 1997, "RF-ID"    : 1996, "CS-TSD"   : 1995, "AP-TSN"   : 1994, "RB-GSfaS" : 1993, "JS-ATA"   : 1992, "JU-RaR"   : 1991, "OH-TMKPS" : 1990,
+            "AT-BL"    : 1989, "TM-B"     : 1988, "PT-AStM"  : 1987, "LM-LD"    : 1986, "AL-FA"    : 1985, "WK-I"     : 1984, "AW-TCP"   : 1983, "JU-RIR"   : 1982, "JT-ACoD"  : 1981, "NM-TES"   : 1980,
+            "JC-TSoJC" : 1979, "JM-ER"    : 1978, "[NA1977]" : 1977, "SB-HG"    : 1976, "MS-TKA"   : 1975, "[NA1974]" : 1974, "EW-TOD"   : 1973, "WS-AoR"   : 1972, "[NA1971]" : 1971, "JS-TCSoJ" : 1970,
+            "NM-HMoD"  : 1969, "WS-TCoNT" : 1968, "BM-TF"    : 1967, "KP-TCSoK" : 1966, "SG-TKotH" : 1965, "[NA1964]" : 1964, "WF-TR"    : 1963, "EO-TEoS"  : 1962, "HL-TKaM"  : 1961, "AD-AaC"   : 1960, 
+            "RT-TToJM" : 1959, "JA-ADitF" : 1958, "[NA1957]" : 1957, "MK-A"     : 1956, "WF-AF"    : 1955, "[NA1954]" : 1954, "EH-TOMaS" : 1953, "HW-TCM"   : 1952, "CR-TT"    : 1951, "AG-TWW"   : 1950, 
+            "JC-GoH"   : 1949, "JM-TotSP" : 1948, "RW-AtKM"  : 1947, "[NA1946]" : 1946, "JH-ABfA"  : 1945, "MF-JitD"  : 1944, "US-DT"    : 1943, "EG-ITOL"  : 1942, "[NA1941]" : 1941, "JS-TGoW"  : 1940, 
+            "MR-TY"    : 1939, "JM-TLGA"  : 1938, "MM-GwtW"  : 1937, "HD-HitH"  : 1936, "JJ-NiN"   : 1935, "CM-LiHB"  : 1934, "TS-TS"    : 1933, "PB-TGE"   : 1932, "MB-YoG"   : 1931, "OL-LB"    : 1930, 
+            "JP-SSM"   : 1929, "TW-TBoSL" : 1928, "LB-EA"    : 1927, "SL-A"     : 1926, "EF-SB"    : 1925, "MW-TAM"   : 1924, "WC-OoO"   : 1923, "BT-AA"    : 1922, "EW-TAoI"  : 1921, "[NA1920]" : 1920, 
+            "BT-TMA"   : 1919, "EP-HF"    : 1918, "[NA1917]" : 1917
+        }
+    },
+    "natba" : {
+        "name" : "National Book Award",
+        "abbr" : "NAT",
+        "type" : "annual",
+        "list" : {
+            "JW-SUS"   : 2017, "CW-TUR"   : 2016, "AJ-FS"    : 2015, "PK-R"     : 2014, "JM-TGLB"  : 2013, "LE-TRH"   : 2012, "JW-StB"   : 2011, "JG-LoM"   : 2010,
+            "CM-LtGWS" : 2009, "PM-SC"    : 2008, "DJ-ToS"   : 2007, "RP-TEM"   : 2006, "WV-EC"    : 2005, "LT-TNfP"  : 2004, "SH-TGF"   : 2003, "JG-TJ"    : 2002, "JF-TC"    : 2001, "SS-IM"    : 2000,
+            "HJ-W"     : 1999, "AM-CB"    : 1998, "CF-CM"    : 1997, "AB-SFaOS" : 1996, "PR-ST"    : 1995, "WG-AFoHO" : 1994, "AP-TSN"   : 1993, "CM-AtPH"  : 1992, "NR-M"     : 1991, "CJ-MP"    : 1990,
+            "JC-S"     : 1989, "PD-PT"    : 1988, "LH-PS"    : 1987, "ED-WF"    : 1986, "DD-WN"    : 1985, "EG-VOJ"   : 1984, "AW-TCP"   : 1983, "JU-RIR"   : 1982, "WM-PSFFV" : 1981, "WS-SC"    : 1980,
+            "TO-GAC"   : 1979, "MS-BT"    : 1978, "WS-TSB"   : 1977, "WG-JR"    : 1976, "RS-DS"    : 1975, "TW-THoHR" : 1975, "TP-GR"    : 1974, "IS-ACoF"  : 1974, "JB-C"     : 1973, "JW-A"     : 1973, "FO-TCS"   : 1972, "SB-MSP"   : 1971, "JO-T"     : 1970,
+            "JK-S"     : 1969, "TW-TED"   : 1968, "BM-TF"    : 1967, "KP-TCSoK" : 1966, "SB-H"     : 1965, "JU-TC"    : 1964, "JP-MdU"   : 1963, "WP-TM"    : 1962, "CR-TWoK"  : 1961, "PR-GC"    : 1960, 
+            "BM-TMB"   : 1959, "JC-TWC"   : 1958, "WM-TFoV"  : 1957, "JO-TNF"   : 1956, "WF-AF"    : 1955, "SB-TAoAM" : 1954, "RE-IM"    : 1953, "JJ-FHtE"  : 1952, "WF-CSoWF" : 1951, "NA-TMwtG" : 1950
+        }
+    },
+    "nbcc" : {
+        "name" : "National Book Critics’ Circle Award",
+        "abbr" : "NBCC",
+        "type" : "annual",
+        "list" : {
+            "JS-I"     : 2017, "LE-LR"    : 2016, "PB-TS"    : 2015, "MR-L"     : 2014, "CH-A"     : 2013, "BF-BLLHW" : 2012, "EP-BVNSS" : 2011, "JE-AVftG" : 2010,
+            "HM-WH"    : 2009, "RB-2666"  : 2008, "JD-TBWLO" : 2007, "KD-TIoL"  : 2006, "ED-TM"    : 2005, "MR-G"     : 2004, "EJ-TKW"   : 2003, "IM-At"     : 2002, "WS-A"     : 2001, "JC-BD"    : 2000,
+            "JL-MB"    : 1999, "AM-TLoaG" : 1998, "PF-TBF"   : 1997, "GB-WiTB"  : 1996, "SE-MTB"   : 1995, "CS-TSD"   : 1994, "EG-ALBD"  : 1993, "CM-AtPH"  : 1992, "JS-ATA"   : 1991, "JU-RaR"   : 1990,
+            "ED-BB"    : 1989, "BM-TMaOS" : 1988, "PR-TC"    : 1987, "RP-KV"    : 1986, "AT-TAT"   : 1985, "LE-LM"    : 1984, "WK-I"     : 1983, "SE-GM"    : 1982, "JU-RIR"   : 1981, "SH-TToV"  : 1980,
+            "TF-TYotF" : 1979, "JC-TSoJC" : 1978, "TM-SoS"   : 1977, "JG-OL"    : 1976, "ED-R"     : 1975
+        }
+    },
+    "penf" : {
+        "name" : "PEN/Faulkner Award",
+        "abbr" : "PENF",
+        "type" : "annual",
+        "list" : {
+            "JS-I"     : 2018, "IM-BtD"   : 2017, "JH-DF"    : 2016, "AL-PftNL" : 2015, "KF-WAACB" : 2014, "BS-EBaEa" : 2013, "JO-TBitA" : 2012, "DE-TCSoD" : 2011, "SA-WD"    : 2010,
+            "JO-N"     : 2009, "KC-TGM"   : 2008, "PR-E"     : 2007, "ED-TM"    : 2006, "HJ-WT"    : 2005, "JU-TES"   : 2004, "SM-TC"    : 2003, "AP-BC"    : 2002, "PR-THS"   : 2001, "HJ-W"     : 2000,
+            "MC-TH"    : 1999, "RZ-TBCH"  : 1998, "GB-WiTB"  : 1997, "RF-ID"    : 1996, "DG-SFoC"  : 1995, "PR-OS"    : 1994, "AP-P"     : 1993, "DD-MII"   : 1992, "JW-PF"    : 1991, "ED-BB"    : 1990,
+            "JS-DaOS"  : 1989, "TB-WE"    : 1988, "RW-SiH"   : 1987, "PT-TOFaO" : 1986, "TW-TBT"   : 1985, "JW-SfYY"  : 1984, "TO-S"     : 1983, "DB-TCI"   : 1982, "WA-HGII"  : 1981
+        }
+    },
+    "ml100" : {
+        "name" : "Modern Library 100",
+        "abbr" : "ML",
+        "type" : "ranked list",
+        "list" : {
+            "JJ-U"     :  1, "FF-TGG"   :  2, "JJ-APotA" :  3, "VN-L"     :  4, "AH-BNW"   :  5, "WF-TSatF" :  6, "JH-C22"   :  7, "AK-DaN"   :  8, "DL-SaL"   :  9, "JS-TGoW"  : 10,
+            "ML-UtV"   : 11, "SB-TWoAF" : 12, "GO-1984"  : 13, "RG-IC"    : 14, "VW-TtL"   : 15, "TD-AAT"   : 16, "CM-THIaL" : 17, "KV-SH5"   : 18, "RE-IM"    : 19, "RW-NS"    : 20,
+            "SB-HtRK"  : 21, "JO-AiS"   : 22, "JD-USA"   : 23, "SA-WO"    : 24, "EF-APtI"  : 25, "HJ-TWotD" : 26, "HJ-TA"    : 27, "FF-TItN"  : 28, "JF-SL"    : 29, "FF-TGS"   : 30,
+            "GO-AF"    : 31, "HJ-TGB"   : 32, "TD-SC"    : 33, "EW-AHoD"  : 34, "WF-AILD"  : 35, "RW-AtKM"  : 36, "TW-TBoSL" : 37, "EF-HE"    : 38, "JB-GTIoM" : 39, "GG-THotM" : 40,
+            "WG-LotF"  : 41, "JD-D"     : 42, "AP-ADttM" : 43, "AH-PCP"   : 44, "EH-TSAR"  : 45, "JC-TSA"   : 46, "JC-N"     : 47, "DL-TR"    : 48, "DL-WiL"   : 49, "HM-ToC"   : 50,
+            "NM-TNatD" : 51, "PR-PC"    : 52, "VN-PF"    : 53, "WF-LiA"   : 54, "JK-OtR"   : 55, "DH-TMF"   : 56, "FF-PE"    : 57, "EW-TAoI"  : 58, "MB-ZD"    : 59, "WP-TM"    : 60,
+            "WC-DCftA" : 61, "JJ-FHtE"  : 62, "JC-TWC"   : 63, "JS-TCitR" : 64, "AB-ACO"   : 65, "WM-OHB"   : 66, "JC-HoD"   : 67, "SL-MS"    : 68, "EW-HoM"   : 69, "LD-TAQ"   : 70,
+            "RH-AHWiJ" : 71, "VN-AHfMB" : 72, "NW-TDotL" : 73, "EH-AFtA"  : 74, "EW-S"     : 75, "MS-TPoMJ" : 76, "JJ-FW"    : 77, "RK-K"     : 78, "EF-ARwaV" : 79, "EW-BR"    : 80,
+            "SB-TAoAM" : 81, "WS-AoR"   : 82, "VN-ABitR" : 83, "EB-TDotH" : 84, "JC-LJ"    : 85, "ED-R"     : 86, "AB-TOWT"  : 87, "JL-TCotW" : 88, "HG-L"     : 89, "SR-MC"    : 90,
+            "EC-TR"    : 91, "WK-I"     : 92, "JF-TM"    : 93, "JR-WSS"   : 94, "IM-UtN"   : 95, "WS-SC"    : 96, "PB-TSS"   : 97, "JC-TPART" : 98, "JD-TGM"   : 99, "BT-TMA"   : 100
+        }
+    },
+    "rp100" : {
+        "name" : "Radcliffe Publishing 100",
+        "abbr" : "RAD",
+        "type" : "ranked list",
+        "list" : {
+            "FF-TGG"   :  1, "JS-TCitR" :  2, "JS-TGoW"  :  3, "HL-TKaM"  :  4, "AW-TCP"   :  5, "JJ-U"     :  6, "TM-B"     :  7, "WG-LotF"  :  8, "GO-1984"  :  9, "WF-TSatF" : 10,
+            "VN-L"     : 11, "JS-OMaM"  : 12, "EW-CW"    : 13, "JJ-APotA" : 14, "JH-C22"   : 15, "AH-BNW"   : 16, "GO-AF"    : 17, "EH-TSAR"  : 18, "WF-AILD"  : 19, "EH-AFtA"  : 20,
+            "JC-HoD"   : 21, "AM-WtP"   : 22, "ZH-TEWWG" : 23, "RE-IM"    : 24, "TM-SoS"   : 25, "MM-GwtW"  : 26, "RW-NS"    : 27, "KK-OFotC" : 28, "KV-SH5"   : 29, "EH-FWtBT" : 30,
+            "JK-OtR"   : 31, "EH-TOMaS" : 32, "JL-TCotW" : 33, "VW-TtL"   : 34, "HJ-PoaL"  : 35, "JB-GTIoM" : 36, "JI-TWAtG" : 37, "RW-AtKM"  : 38, "EF-ARwaV" : 39, "JT-TLotR" : 40,
+            "TK-SL"    : 41, "EW-TAoI"  : 42, "AR-TF"    : 43, "JJ-FW"    : 44, "US-TJ"    : 45, "VW-MD"    : 46, "LB-TWWoO" : 47, "DL-LCL"   : 48, "AB-ACO"   : 49, "KC-TA"    : 50,
+            "WC-MA"    : 51, "EF-HE"    : 52, "TC-ICB"   : 53, "JS-FaZ"   : 54, "SR-TSV"   : 55, "TM-J"     : 56, "WS-SC"    : 57, "WF-AA"    : 58, "EF-APtI"  : 59, "EW-EF"    : 60,
+            "FO-AGMIH" : 61, "FF-TItN"  : 62, "VW-OAB"   : 63, "DL-SaL"   : 64, "TW-BotV"  : 65, "KV-CC"    : 66, "JK-ASP"   : 67, "WF-LiA"   : 68, "HJ-TWotD" : 69, "CA-TFA"   : 70,
+            "DD-R"     : 71, "DA-THGtG" : 72, "WB-NL"    : 73, "EW-BR"    : 74, "DL-WiL"   : 75, "TW-LHA"   : 76, "EH-IOT"   : 77, "GS-TAoAB" : 78, "DH-TMF"   : 79, "NM-TNatD" : 80,
+            "JR-WSS"   : 81, "DD-WN"    : 82, "WC-OP"    : 83, "HM-ToC"   : 84, "HW-TWotW" : 85, "JC-LJ"    : 86, "HJ-TB"    : 87, "TD-AAT"   : 88, "WC-DCftA" : 89, "KG-TWitW" : 90,
+            "FF-TSoP"  : 91, "AR-AS"    : 92, "JF-TFLW"  : 93, "SL-B"     : 94, "RK-K"     : 95, "FF-TBatD" : 96, "JU-R,R"   : 97, "EF-WAFtT" : 98, "SL-MS"    : 99, "SR-MC"    : 100
+        }
+    },
+    "rc100" : {
+        "name" : "Readers’ Choice 100",
+        "abbr" : "RC",
+        "type" : "ranked list",
+        "list" : {
+            "AR-AS"    :  1, "AR-TF"    :  2, "LH-BE"    :  3, "JT-TLotR" :  4, "HL-TKaM"  :  5, "GO-1984"  :  6, "AR-A"     :  7, "AR-WtL"   :  8, "LH-ME"    :  9, "LH-F"     : 10,
+            "JJ-U"     : 11, "JH-C22"   : 12, "FF-TGG"   : 13, "FH-D"     : 14, "RH-TMIaH" : 15, "RH-SiaSL" : 16, "NS-ATLA"  : 17, "AH-BNW"   : 18, "JS-TCitR" : 19, "GO-AF"    : 20,
+            "TP-GR"    : 21, "JS-TGoW"  : 22, "KV-SH5"   : 23, "MM-GwtW"  : 24, "WG-LotF"  : 25, "JS-S"     : 26, "NS-TftT"  : 27, "JI-APfOM" : 28, "SK-TS"    : 29, "JF-TFLW"  : 30,
+            "TM-B"     : 31, "EE-TWO"   : 32, "WF-TSatF" : 33, "VN-L"     : 34, "Cd-Mh"    : 35, "WF-AA"    : 36, "WM-OHB"   : 37, "FO-WB"    : 38, "ML-UtV"   : 39, "RD-FB"    : 40,
+            "Cd-StBF"  : 41, "JK-OtR"   : 42, "JC-HoD"   : 43, "Cd-Y"     : 44, "HL-AtMoM" : 45, "MS-OLN"   : 46, "Cd-MaD"   : 47, "VW-TtL"   : 48, "WP-TM"    : 49, "Cd-T"     : 50,
+            "DA-THGtG" : 51, "CM-THIaL" : 52, "MA-THT"   : 53, "CM-BM"    : 54, "AB-ACO"   : 55, "NS-OtB"   : 56, "JJ-APotA" : 57, "Cd-G"     : 58, "OC-EG"    : 59, "Cd-TLC"   : 60,
+            "WG-TR"    : 61, "RH-ST"    : 62, "EH-TSAR"  : 63, "JI-TWAtG" : 64, "RB-SWTWC" : 65, "SJ-THoHH" : 66, "WF-AILD"  : 67, "HM-ToC"   : 68, "RE-IM"    : 69, "TW-TWW"   : 70,
+            "JF-TM"    : 71, "RH-TDiS"  : 72, "RP-ZatAo" : 73, "RG-IC"    : 74, "JL-TCotW" : 75, "FO-AS2B"  : 76, "RB-F451"  : 77, "SL-A"     : 78, "RA-WD"    : 79, "WB-NL"    : 80,
+            "TC-THfRO" : 81, "LH-GP"    : 82, "RH-TPM"   : 83, "SK-I"     : 84, "TP-V"     : 85, "RH-DS"    : 86, "RH-CotG"  : 87, "EW-BR"    : 88, "WF-LiA"   : 89, "KK-OFotC" : 90,
+            "EH-AFtA"  : 91, "PB-TSS"   : 92, "KK-SaGN"  : 93, "WC-MA"    : 94, "Cd-M"     : 95, "CM-S"     : 96, "RH-MW"    : 97, "RB-I"     : 98, "RD-TCM"   : 99, "SR-TSV"   : 100
+        }
+    },
+    "tm100" : {
+        "name" : "TIME 100",
+        "abbr" : "TIME",
+        "type" : "unranked list",
+        "list" : {
+            "SB-TAoAM" : 1, "RW-AtKM"  : 1, "PR-AP"    : 1, "TD-AAT"   : 1, "GO-AF"    : 1, "JO-AiS"   : 1, "JB-AYTGI" : 1, "BM-TA"    : 1, "FO-AS2B"  : 1, "IM-At"     : 1, 
+            "TM-B"     : 1, "CI-TBS"   : 1, "RC-TBS"   : 1, "MA-TBA"   : 1, "CM-BM"    : 1, "EW-BR"    : 1, "TW-TBoSL" : 1, "HR-CIS"   : 1, "JH-C22"   : 1, "JS-TCitR" : 1, 
+            "AB-ACO"   : 1, "WS-TCoNT" : 1, "JF-TC"    : 1, "TP-TCL49" : 1, "AP-ADttM" : 1, "NW-TDotL" : 1, "WC-DCftA" : 1, "JA-ADitF" : 1, "EB-TDotH" : 1, "JD-D"     : 1, 
+            "RS-DS"    : 1, "JC-F"     : 1, "JF-TFLW"  : 1, "DL-TGN"   : 1, "JB-GTIoM" : 1, "MM-GwtW"  : 1, "JS-TGoW"  : 1, "TP-GR"    : 1, "FF-TGG"   : 1, "EW-AHoD"  : 1, 
+            "CM-THIaL" : 1, "GG-THotM" : 1, "SB-H"     : 1, "MR-H"     : 1, "VN-AHfMB" : 1, "RG-IC"    : 1, "DW-IJ"    : 1, "RE-IM"    : 1, "WF-LiA"   : 1, "CL-TLWaW" : 1, 
+            "VN-L"     : 1, "WG-LotF"  : 1, "JT-TLotR" : 1, "HG-L"     : 1, "WP-TM"    : 1, "KA-LJ"    : 1, "CS-TMWLC" : 1, "SR-MC"    : 1, "MA-M"     : 1, "VW-MD"    : 1, 
+            "WB-NL"    : 1, "RW-NS"    : 1, "WG-N"     : 1, "GO-1984"  : 1, "KI-NLMG"  : 1, "JK-OtR"   : 1, "KK-OFotC" : 1, "JK-TPB"   : 1, "VN-PF"    : 1, "EF-APtI"  : 1, 
+            "JD-PIAIL" : 1, "PR-PC"    : 1, "AB-P"     : 1, "GG-TPatG" : 1, "MS-TPoMJ" : 1, "JU-R,R"   : 1, "ED-R"     : 1, "WG-TR"    : 1, "DH-RH"    : 1, "RY-RR"    : 1, 
+            "PB-TSS"   : 1, "KV-SH5"   : 1, "NS-SC"    : 1, "JB-TSWF"  : 1, "WF-TSatF" : 1, "RF-TS"    : 1, "JL-TSWCI" : 1, "EH-TSAR"  : 1, "ZH-TEWWG" : 1, "CA-TFA"   : 1,
+            "HL-TKaM"  : 1, "VW-TtL"   : 1, "HM-ToC"   : 1, "PD-U"     : 1, "IM-UtN"   : 1, "ML-UtV"   : 1, "AM-W"     : 1, "DD-WN"    : 1, "ZS-WT"    : 1, "JR-WSS"   : 1
+        }
+    }
+}

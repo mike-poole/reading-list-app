@@ -1,0 +1,136 @@
+
+.contentArea {
+	margin: 5.5rem 2rem 0;
+}
+
+.buttonBar {
+	margin: 0 0 1.5rem;
+	text-align: right;
+}
+
+.book {
+	padding: .2rem;
+
+	.title {
+		font-family: 'Times New Roman', Times, serif;
+		font-size: 1.2rem;
+		font-style: italic;
+		padding-right: .5rem;
+		&:after {
+			content: ',';
+		}
+	}
+
+	.author {
+		font-family: Arial, Helvetica, sans-serif;
+		font-style: normal;
+		padding-right: .5rem;
+	}
+	
+	.year {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: .85rem;
+		color: gray;
+	}
+
+	.awardTags {
+		padding-left: .5rem;
+	}
+}
+
+.author {
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+}
+
+.expansionPanel {
+	div:first-child > div {
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: 500;
+		font-size: 1.1rem;
+		.summaryLeft {
+			width: 100%;
+			font-size: 1.5rem;
+			font-weight: 500;
+			text-shadow: 1px 1px darkgray;
+			display: flex;
+		}
+		.summaryRight {
+			display: flex;
+			font-size: 1.2rem;
+			padding-right: 0;
+		}
+	}
+	.expansionDetailsRoot {
+		padding-top: 0;
+	}
+	.expansionDetails {
+		display: block;
+	}
+}
+
+.flyoutPaper {
+	padding: 1rem;
+	.heading {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 1rem;
+		padding: 0.5rem 0;
+	}
+	.checkboxList {
+		padding-top: 0.2rem;
+		label {
+			margin-left: 0;
+			span:first-child {
+				padding: 0.2rem 0.2rem 0.2rem 0;
+				span {
+					font-size: 0.75rem;
+				}
+				svg {
+					width: 1.1rem;
+					height: 1.0rem;
+				}
+			}
+			span {
+				font-size: 0.825rem;
+			}
+		}
+	}
+}
+
+.awardBadgeRoot {
+	.awardBadge {
+		top: 50%;
+		font-size: .025rem;
+	}
+}
+
+.summaryBadgeRoot {
+	margin-left: 1rem;
+	.summaryBadge {
+		top: 50%;
+		font-size: 1.2rem;
+		height: 1.8rem;
+		width: 1.8rem;
+		position: initial;
+	}
+}
+
+
+.awardTag {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: ivory;
+	font-size: 0.65rem;
+	padding: 0.1rem 0.3rem;
+	margin: 0 0.1rem;
+	border-radius: 10%;
+}
+
+.awardTagAnnual {
+	@extend .awardTag;
+	background-color: darkslateblue;
+}
+
+.awardTagTop100 {
+	@extend .awardTag;
+	background-color: firebrick;
+}

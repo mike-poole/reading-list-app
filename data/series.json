@@ -1,0 +1,29 @@
+{
+    "JD-USA" : {
+        "name" : "U.S.A. Trilogy",
+        "books" : [ "JD-T4P", "JD-NN", "JD-TBM" ] },
+    "JT-TLotR" : {
+        "name" : "The Lord of the Rings",
+        "books" : [ "JT-TFotR", "JT-TTT", "JT-TRotK" ] },
+    "GM-ASoIaF" : {
+        "name" : "A Song of Ice and Fire",
+        "books" : [ "GM-AGoT", "GM-ACoK", "GM-ASoS", "GM-AFfC", "GM-ADwD" ] },
+    "GW-TBotNS" : {
+        "name" : "The Book of the New Sun",
+        "books" : [ "GW-TSofT", "GW-TCotC", "GW-TSotL", "GW-TCotA" ] },
+    "CM-TBT" : {
+        "name" : "Border Trilogy",
+        "books" : [ "CM-AtPH", "CM-TC", "CM-CotP" ] },
+    "SK-TDT" : {
+        "name" : "The Dark Tower",
+        "books" : [ "SK-TG", "SK-TDotT", "SK-TWL", "SK-WaG", "SK-WotC", "SK-SoS", "SK-TDT", "SK-TWTtK" ] },
+    "JF-SL" : {
+        "name" : "Studs Lonigan Trilogy",
+        "books" : [ "JF-YL", "JF-TYMoS", "JF-JD" ] },
+    "AP-ADttM" : {
+        "name" : "A Dance to the Music of Time",
+        "books" : [ "AP-AQoU", "AP-ABM", "AP-TAW", "AP-ALM", "AP-CCR", "AP-TKO", "AP-TVoB", "AP-TSA", "AP-TMP", "AP-BDFaR", "AP-TK", "AP-HSH" ] },
+    "LD-TAQ" : {
+        "name" : "The Alexandria Quartet",
+        "books" : [ "LD-J", "LD-C", "LD-M", "LD-C" ] }
+}
