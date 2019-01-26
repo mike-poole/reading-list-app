@@ -64,11 +64,7 @@ export class ReadingList extends React.Component {
 						<ExpansionPanelSummary>
 							<div className="summaryLeft">{year}</div>
 							<div className="summaryRight">
-								<SummaryAwardTags year={year}/>
-								{/* <span className="summaryTotal">
-									{store.readingList[year].count}
-								</span> */}
-
+								<SummaryAwardTags id={year} list={store.readingList[year].books}/>
 								<Badge 
 									badgeContent={store.readingList[year].count}
 									color='primary'

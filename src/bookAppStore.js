@@ -27,7 +27,7 @@ export class BookAppStore extends React.Component {
 				title: book.name,
 				alphaTitle: this.getBookAlphabeticalTitle(book.name),
 				authorKey: book.author,
-				authorName: this.getAuthorAsString(book.author),
+				authorName: this.getAuthorsAsString(book.author),
 				year: book.year,
 				category: book.cat,
 				awards: this.getBookAwards(bookKey),
@@ -50,7 +50,28 @@ export class BookAppStore extends React.Component {
 	}
 
 	@computed
+	get authorMap() {
+		const books = Object.entries(this.bookInfo).map(entry => entry[1]).filter(book => book.yearsRead.length > 0);
+		let authorMap = {};
+		books.forEach(book => {
+			const authorArr = Array.isArray(book.authorKey) ? book.authorKey : [book.authorKey];
+			authorArr.forEach(authKey => {
+				const curAuthBookList = authorMap[authKey] || [];
+				curAuthBookList.push(book)
+				authorMap[authKey] = curAuthBookList;
+			});
+		});
+		return authorMap;
+	}
+
+	@computed
 	get authorList() {
+		const list = Object.entries(this.authorMap).map((entry) => { return { name: this.getAuthorAsString(entry[0], false), books: entry[1]}});
+		list.sort((a, b) => a.name < b.name ? -1 : 1);
+		return list;
+	}
+
+	get authorInfo() {
 		let authors = [];
 		for (const key in Authors) {
 			const author = Authors[key];
@@ -146,7 +167,7 @@ export class BookAppStore extends React.Component {
 		return title;
 	}
  
-	getAuthorAsString(author, firstNameFirst = true) {
+	getAuthorsAsString(author, firstNameFirst = true) {
 		let s;
 		const authorArr = Array.isArray(author) ? author : [author];
 		authorArr.forEach(authKey => {
@@ -158,4 +179,14 @@ export class BookAppStore extends React.Component {
 		});
 		return s;
 	}
+
+	getAuthorAsString(authorKey, firstNameFirst = true) {
+		const auth = Authors[authorKey];
+		if (firstNameFirst) {
+			return auth.firstName + ' ' + auth.lastName;
+		} else {
+			return auth.lastName + ', ' + auth.firstName;
+		}
+	}
+
 }

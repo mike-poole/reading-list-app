@@ -24,10 +24,10 @@ export class AwardTags extends React.Component {
 @inject('bookAppStore') @observer
 export class SummaryAwardTags extends React.Component {
 	render() {
-		const { bookAppStore: store, year } = this.props;
+		const { bookAppStore: store, list, id } = this.props;
 		return (
 			store.showingAwards.map(award => 
-				<SummaryAwardTag key={`${year}-${award}`} award={award} year={year} books={store.readingList[year].books}/>
+				<SummaryAwardTag key={`${id}-${award}`} award={award} books={list}/>
 			)
 		)
 	}
@@ -36,7 +36,7 @@ export class SummaryAwardTags extends React.Component {
 @inject('bookAppStore') @observer
 class SummaryAwardTag extends React.Component {
 	render() {
-		const { bookAppStore: store, books, award, year } = this.props;
+		const { bookAppStore: store, books, award } = this.props;
 		const count = books.reduce((accum, book) => accum + (book.awards[award] ? 1 : 0), 0);
 		if (count > 0) {
 			const className = store.awards[award].type === 'annual' ? 'awardTagAnnual' : 'awardTagTop100';
