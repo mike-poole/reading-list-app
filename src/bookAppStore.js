@@ -5,10 +5,12 @@ import Books from '../data/books.json';
 import ReadingList from '../data/readingList.json';
 import Series from '../data/series.json';
 import Awards from '../data/awards.json';
+import Genres from '../data/genres.json';
 
 export class BookAppStore extends React.Component {
 
 	@observable awards = {};
+	@observable genres = {};
 	bookInfo = {};
 	
 	constructor() {
@@ -20,6 +22,13 @@ export class BookAppStore extends React.Component {
 				show: false
 			}
 		}
+		for (let genre in Genres) {
+			this.genres[genre] = {
+				key: genre,
+				name: Genres[genre].name,
+				show: true
+			}
+		}
 		for (let bookKey in Books) {
 			const book = Books[bookKey];
 			this.bookInfo[bookKey] = {
@@ -29,7 +38,7 @@ export class BookAppStore extends React.Component {
 				authorKey: book.author,
 				authorName: this.getAuthorsAsString(book.author),
 				year: book.year,
-				category: book.cat,
+				genre: book.cat,
 				awards: this.getBookAwards(bookKey),
 				yearsRead: this.getBookYearsRead(bookKey),
 				series: this.getBookSeries(bookKey)
@@ -43,15 +52,27 @@ export class BookAppStore extends React.Component {
 	}
 
 	@computed
+	get filteredBooks() {
+		return Object.entries(this.bookInfo).map(entry => entry[1])
+						.filter(book => book.yearsRead.length > 0)
+						.filter(book => this.genres[book.genre].show);
+	}
+
+	@computed
 	get bookList() {
-		let books = Object.entries(this.bookInfo).map(entry => entry[1]).filter(book => book.yearsRead.length > 0);
+		const books = this.filteredBooks;
 		books.sort((a, b) => a.alphaTitle < b.alphaTitle ? -1 : 1);
 		return books;
 	}
 
 	@computed
+	get genreList() {
+		return Object.entries(this.genres).map(entry => entry[1]);
+	}
+
+	@computed
 	get authorMap() {
-		const books = Object.entries(this.bookInfo).map(entry => entry[1]).filter(book => book.yearsRead.length > 0);
+		const books = this.filteredBooks;
 		let authorMap = {};
 		books.forEach(book => {
 			const authorArr = Array.isArray(book.authorKey) ? book.authorKey : [book.authorKey];
@@ -86,7 +107,7 @@ export class BookAppStore extends React.Component {
 	get readingList() {
 		const readingList = {}
 		for (const year in ReadingList) {
-			const books = ReadingList[year].map(book => this.bookInfo[book]);
+			const books = ReadingList[year].map(book => this.bookInfo[book]).filter(book => this.genres[book.genre].show);
 			readingList[year] = { books, count: books.length };
 		}
 
@@ -114,6 +135,16 @@ export class BookAppStore extends React.Component {
 			show: !this.awards[awardKey].show
 		}
 		this.awards = { ...this.awards, ...changed };
+	}
+
+	@action
+	toggleGenre(genreKey) {
+		const changed = {};
+		changed[genreKey] = {
+			...this.genres[genreKey],
+			show: !this.genres[genreKey].show
+		}
+		this.genres = { ...this.genres, ...changed };
 	}
 
 	getBook(bookKey) {

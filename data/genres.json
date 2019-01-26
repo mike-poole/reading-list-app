@@ -1,0 +1,14 @@
+{
+	"f" : {
+		"name" : "Fiction"
+	},
+	"l" : {
+		"name" : "Literary Non-Fiction"
+	},
+	"n" : {
+		"name" : "Non-Fiction"
+	},
+	"o" : {
+		"name" : "Poetry, Essays, and Humor"
+	}
+}

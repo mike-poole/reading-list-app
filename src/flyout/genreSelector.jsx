@@ -7,29 +7,29 @@ import Divider from '@material-ui/core/Divider';
 import '../styles/bookApp.scss';
 
 @inject('bookAppStore') @observer
-export class AwardSelector extends React.Component {
+export class GenreSelector extends React.Component {
 
 	onChange = key => event => {
-		this.props.bookAppStore.toggleAward(key);
+		this.props.bookAppStore.toggleGenre(key);
 	}
 
 	render() {
 		const { bookAppStore: store } = this.props;
 		return (
 			<div className='flyoutSection'>
-				<span className='heading'>Tag Awards</span>
+				<span className='heading'>Show Genres</span>
 				<Divider/>
 				<FormGroup classes={{root: 'checkboxList'}}>
-				{ store.awardList.map(award =>
+				{ store.genreList.map(genre =>
 					<FormControlLabel
-						key={award.key}
-						label={award.name} 
+						key={genre.key}
+						label={genre.name} 
 						classes={{ root: 'awardSelectorItem' }}
 						control={
 							<Checkbox
-								value={award.key}
-								checked={store.awards[award.key].show}
-								onChange={this.onChange(award.key)}
+								value={genre.key}
+								checked={store.genres[genre.key].show}
+								onChange={this.onChange(genre.key)}
 							/>
 						}
 					/>
