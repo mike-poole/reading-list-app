@@ -98,6 +98,18 @@
 	.flyoutSection {
 		padding-bottom: 2rem;
 	}
+	.rangeContainer {
+		display: inline-flex;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 0.8rem;
+		margin-top: 0.5rem;
+		.rangeLabelLeft {
+			padding: 0.5rem 0.5rem 0.5rem 0;
+		}
+		.rangeLabelRight {
+			padding: 0.5rem 0.5rem 0.5rem 0.75rem;
+		}
+	}
 }
 
 .awardBadgeRoot {

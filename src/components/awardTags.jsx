@@ -1,6 +1,5 @@
 import React from 'react';
 import { inject, observer } from 'mobx-react';
-import Badge from '@material-ui/core/Badge';
 
 @inject('bookAppStore') @observer
 export class AwardTags extends React.Component {
@@ -9,8 +8,8 @@ export class AwardTags extends React.Component {
 		const keys = Object.keys(awards);
 		return (
 			<span className='awardTags'>
-				{ keys.filter(award => store.awards[award].show).map(key => {
-					const award = store.awards[key];
+				{ keys.filter(award => store.filters.award[award]).map(key => {
+					const award = store.awardInfo[key];
 					const className = award.type === 'annual' ? 'awardTagAnnual' : 'awardTagTop100';
 					return (
 						<span key={`${bookKey}-${award.key}`} className={className}>{award.key}</span>
@@ -39,7 +38,7 @@ class SummaryAwardTag extends React.Component {
 		const { bookAppStore: store, books, award } = this.props;
 		const count = books.reduce((accum, book) => accum + (book.awards[award] ? 1 : 0), 0);
 		if (count > 0) {
-			const className = store.awards[award].type === 'annual' ? 'awardTagAnnual' : 'awardTagTop100';
+			const className = store.awardInfo[award].type === 'annual' ? 'awardTagAnnual' : 'awardTagTop100';
 			return (
 				<span>
 					<span className={className}>

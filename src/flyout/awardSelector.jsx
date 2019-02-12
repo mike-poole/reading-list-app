@@ -28,7 +28,7 @@ export class AwardSelector extends React.Component {
 						control={
 							<Checkbox
 								value={award.key}
-								checked={store.awards[award.key].show}
+								checked={store.filters.award[award.key]}
 								onChange={this.onChange(award.key)}
 							/>
 						}

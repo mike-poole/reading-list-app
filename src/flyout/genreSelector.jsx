@@ -28,7 +28,7 @@ export class GenreSelector extends React.Component {
 						control={
 							<Checkbox
 								value={genre.key}
-								checked={store.genres[genre.key].show}
+								checked={store.filters.genre[genre.key]}
 								onChange={this.onChange(genre.key)}
 							/>
 						}

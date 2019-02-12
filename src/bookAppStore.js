@@ -9,25 +9,32 @@ import Genres from '../data/genres.json';
 
 export class BookAppStore extends React.Component {
 
-	@observable awards = {};
-	@observable genres = {};
 	bookInfo = {};
+	awardInfo = {};
+	genreInfo = {};
+
+	@observable filters = {
+		award: {},
+		genre: {},
+		year: {}
+	};
 	
 	constructor() {
 		super();
 		for (let award in Awards) {
-			this.awards[Awards[award].abbr] = {
-				key: Awards[award].abbr,
-				type: Awards[award].type,
-				show: false
+			const abbr = Awards[award].abbr;
+			this.awardInfo[abbr] = {
+				key: abbr,
+				type: Awards[award].type
 			}
+			this.filters.award[abbr] = false;
 		}
 		for (let genre in Genres) {
-			this.genres[genre] = {
+			this.genreInfo[genre] = {
 				key: genre,
-				name: Genres[genre].name,
-				show: true
+				name: Genres[genre].name
 			}
+			this.filters.genre[genre] = true;
 		}
 		for (let bookKey in Books) {
 			const book = Books[bookKey];
@@ -48,14 +55,25 @@ export class BookAppStore extends React.Component {
 
 	@computed
 	get showingAwards() {
-		return Object.entries(this.awards).filter(([_, award]) => award.show).map(([key]) => key);
+		return Object.entries(this.filters.award).filter(([_, show]) => show).map(([key]) => key);
 	}
 
 	@computed
 	get filteredBooks() {
-		return Object.entries(this.bookInfo).map(entry => entry[1])
-						.filter(book => book.yearsRead.length > 0)
-						.filter(book => this.genres[book.genre].show);
+		let books = Object.entries(this.bookInfo).map(entry => entry[1])
+						  .filter(book => book.yearsRead.length > 0);
+		return this.filter(books);
+	}
+
+	filter(books) {
+		let filteredBooks = books.filter(book => this.filters.genre[book.genre]);
+		if (this.filters.year.start) {
+			filteredBooks = filteredBooks.filter(book => book.year >= this.filters.year.start);
+		}
+		if (this.filters.year.end) {
+			filteredBooks = filteredBooks.filter(book => book.year <= this.filters.year.end);
+		}
+		return filteredBooks;
 	}
 
 	@computed
@@ -67,7 +85,7 @@ export class BookAppStore extends React.Component {
 
 	@computed
 	get genreList() {
-		return Object.entries(this.genres).map(entry => entry[1]);
+		return Object.entries(this.genreInfo).map(entry => entry[1]);
 	}
 
 	@computed
@@ -107,7 +125,7 @@ export class BookAppStore extends React.Component {
 	get readingList() {
 		const readingList = {}
 		for (const year in ReadingList) {
-			const books = ReadingList[year].map(book => this.bookInfo[book]).filter(book => this.genres[book.genre].show);
+			const books = this.filter(ReadingList[year].map(bookKey => this.bookInfo[bookKey]));
 			readingList[year] = { books, count: books.length };
 		}
 
@@ -129,22 +147,17 @@ export class BookAppStore extends React.Component {
 
 	@action
 	toggleAward(awardKey) {
-		const changed = {};
-		changed[awardKey] = {
-			...this.awards[awardKey],
-			show: !this.awards[awardKey].show
-		}
-		this.awards = { ...this.awards, ...changed };
+		this.filters.award[awardKey] = !this.filters.award[awardKey];
 	}
 
 	@action
 	toggleGenre(genreKey) {
-		const changed = {};
-		changed[genreKey] = {
-			...this.genres[genreKey],
-			show: !this.genres[genreKey].show
-		}
-		this.genres = { ...this.genres, ...changed };
+		this.filters.genre[genreKey] = !this.filters.genre[genreKey];
+	}
+
+	@action
+	setYearFilter(startOrEnd, year) {
+		this.filters.year[startOrEnd] = year;
 	}
 
 	getBook(bookKey) {
