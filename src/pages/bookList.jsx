@@ -1,9 +1,9 @@
 import React from 'react';
-import { inject } from 'mobx-react';
+import { inject, observer } from 'mobx-react';
 import { Book } from '../components/book.jsx';
 import '../styles/bookApp.scss';
 
-@inject('bookAppStore')
+@inject('bookAppStore') @observer
 export class BookList extends React.Component {
 
 	render() {

@@ -18,14 +18,15 @@ export class YearRangeSelector extends React.Component {
 				<span className='heading'>Show Years of Publication</span>
 				<Divider/>
 				<div className='rangeContainer'>
-					<div className='rangeLabelLeft'>From</div>
+					<div className='rangeLabel'>From</div>
 					<TextField
 						id='yearStart'
 						type='number'
 						onChange={this.onChange('start')}
 						value={store.filters.year.start}
 					/>
-					<div className='rangeLabelRight'>to</div>
+					<br/>
+					<div className='rangeLabel'>To</div>
 					<TextField
 						id='yearEnd'
 						type='number'

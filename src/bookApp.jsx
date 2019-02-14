@@ -1,6 +1,7 @@
 import React from 'react';
 import { observable, action } from 'mobx';
 import { Provider, observer } from 'mobx-react';
+import classNames from 'classnames';
 import AppBar from '@material-ui/core/AppBar';
 import IconButton from '@material-ui/core/IconButton';
 import Tabs from '@material-ui/core/Tabs';
@@ -42,14 +43,20 @@ export class BookApp extends React.Component {
 	}
 
 	render() {
+		const contentAreaClasses = classNames(
+			'contentArea', { 'contentAreaShifted': this.drawerOpen }
+		);
+		const appBarClasses = classNames(
+			'appBar', { 'appBarShifted': this.drawerOpen }
+		);
 		return (
 			<Provider bookAppStore={this.store}>
 				<div>
 					<FlyoutMenu drawerOpen={this.drawerOpen} closeDrawer={this.closeDrawer}/>
 
-					<AppBar>
+					<AppBar classes={{root: appBarClasses}} >
 						<Toolbar>
-							<IconButton onClick={this.openDrawer}>
+							<IconButton onClick={this.openDrawer} disabled={this.drawerOpen}>
 								<MenuIcon color='action'/>
 							</IconButton>
 							<Tabs value={this.activeTab} onChange={this.onClickTab}>
@@ -60,7 +67,7 @@ export class BookApp extends React.Component {
 						</Toolbar>
 					</AppBar>
 
-					<div className='contentArea'>
+					<div className={contentAreaClasses}>
 						{ this.activeTab === 0 &&
 							<ReadingList/>
 						}

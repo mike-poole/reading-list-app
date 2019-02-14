@@ -1,6 +1,19 @@
 
+$flyoutWidth: 15.5rem;
+
 .contentArea {
 	margin: 5.5rem 2rem 0;
+	transition: padding-left 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.appBar {
+	padding-left: 0;
+	transition: padding-left 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.contentAreaShifted, .appBarShifted {
+	padding-left: $flyoutWidth + 2;
+	transition: padding-left 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
 }
 
 .buttonBar {
@@ -70,7 +83,12 @@
 }
 
 .flyoutPaper {
-	padding: 1rem;
+	padding: 0.5rem 1rem;
+	width: $flyoutWidth;
+	.flyoutHeader {
+		display: flex;
+		justify-content: flex-end;
+	}
 	.heading {
 		font-family: Arial, Helvetica, sans-serif;
 		font-size: 1rem;
@@ -99,15 +117,11 @@
 		padding-bottom: 2rem;
 	}
 	.rangeContainer {
-		display: inline-flex;
 		font-family: Arial, Helvetica, sans-serif;
 		font-size: 0.8rem;
 		margin-top: 0.5rem;
-		.rangeLabelLeft {
-			padding: 0.5rem 0.5rem 0.5rem 0;
-		}
-		.rangeLabelRight {
-			padding: 0.5rem 0.5rem 0.5rem 0.75rem;
+		.rangeLabel {
+			padding: 0.5rem 0 0;
 		}
 	}
 }
