@@ -1,8 +1,8 @@
 import React from 'react';
 import { computed, observable, action, autorun } from 'mobx';
-import { AwardData, AuthorData, BookData, GenreData,
+import { AwardData, AuthorData, BookData, GenreData, SeriesData,
 	BookInfoModel, AuthorInfoModel, ReadingListInfo, SeriesInfoModel, GenreInfoModel, AwardInfoModel,
-	FilterModel, GenreType } from './models/model';
+	BookSeriesInfoModel, FilterModel, GenreType } from './models/model';
 import * as Authors from '../data/authors.json';
 import * as Books from '../data/books.json';
 import * as ReadingList from '../data/readingList.json';
@@ -16,10 +16,8 @@ export class BookAppStore {
 	@observable awardInfo: Map<string, AwardInfoModel> = new Map();
 	@observable authorInfo: Map<string, AuthorInfoModel> = new Map();
 	@observable genreInfo: Map<string, GenreInfoModel> = new Map();
+	@observable seriesInfo: Map<string, SeriesInfoModel> = new Map();
 	@observable readingListInfo: Map<string, ReadingListInfo> = new Map();
-
-	@observable readingListData = {};
-	@observable seriesData = {};
 
 	@observable filters: FilterModel = {};
 	
@@ -28,37 +26,37 @@ export class BookAppStore {
 		this.filters.award = {};  // map of string -> boolean
 		this.filters.genre = {};  // map of GenreKey -> boolean
 
-		this.readingListData = JSON.parse(JSON.stringify(ReadingList)).default;
-		this.seriesData = JSON.parse(JSON.stringify(Series)).default;
+		const authorData = JSON.parse(JSON.stringify(Authors)).default;
+		const bookData = JSON.parse(JSON.stringify(Books)).default;
+		const awardData = JSON.parse(JSON.stringify(Awards)).default;
+		const genreData = JSON.parse(JSON.stringify(Genres)).default;
+		const seriesData = JSON.parse(JSON.stringify(Series)).default;
+		const readingListData = JSON.parse(JSON.stringify(ReadingList)).default;
 
-		const authorData: AuthorData[] = JSON.parse(JSON.stringify(Authors)).default;
-		const bookData: BookData[] = JSON.parse(JSON.stringify(Books)).default;
-		const awardData: AwardData[] = JSON.parse(JSON.stringify(Awards)).default;
-		const genreData: GenreData[] = JSON.parse(JSON.stringify(Genres)).default;
-
-		for (const award in awardData) {
-			const abbr: string = awardData[award].abbr;
+		for (const awardKey in awardData) {
+			const award: AwardData = awardData[awardKey];
 			const awardInfo: AwardInfoModel = {
-				key: abbr,
-				type: awardData[award].type,
-				name: awardData[award].name,
-				books: awardData[award].list
+				key: award.abbr,
+				type: award.type,
+				name: award.name,
+				books: award.list
 			}
-			this.awardInfo.set(abbr, awardInfo);
-			this.filters.award[abbr] = false;
+			this.awardInfo.set(award.abbr, awardInfo);
+			this.filters.award[award.abbr] = false;
 		}
 
-		for (const genre in genreData) {
+		for (const genreKey in genreData) {
+			const genre: GenreData = genreData[genreKey];
 			const genreInfo: GenreInfoModel = {
-				key: genre as GenreType,
-				name: genreData[genre].name
+				key: genreKey as GenreType,
+				name: genre.name
 			}
-			this.genreInfo.set(genre, genreInfo);
+			this.genreInfo.set(genreKey, genreInfo);
 			this.filters.genre[genreInfo.key] = true;
 		}
 
 		for (const authorKey in authorData) {
-			const author = authorData[authorKey];
+			const author: AuthorData = authorData[authorKey];
 			const authorInfo: AuthorInfoModel = {
 				key: authorKey,
 				name: `${author.firstName} ${author.lastName}`,
@@ -75,46 +73,96 @@ export class BookAppStore {
 
 		for (const bookKey in bookData) {
 			const book: BookData = bookData[bookKey];
-			const yearsRead = this.getBookYearsRead(bookKey);
-			const wasRead = yearsRead.length > 0;
 			const bookInfo: BookInfoModel = {
 				key: bookKey,
 				title: book.name,
 				alphaTitle: this.getBookAlphabeticalTitle(book.name),
-				authorKey: book.author,
+				authorKeys: Array.isArray(book.author) ? book.author : [book.author],
 				authorName: this.getAuthorsAsString(book.author),
 				year: book.year,
 				genre: book.cat,
 				awards: this.getBookAwards(bookKey),
-				series: this.getBookSeries(bookKey),
-				yearsRead
+				series: undefined,
+				yearsRead: []
 			}
 			this.bookInfo.set(bookKey, bookInfo);
 
-			const authorArr = Array.isArray(book.author) ? book.author : [book.author];
-			authorArr.forEach(authorKey => {
+			bookInfo.authorKeys.forEach(authorKey => {
 				const author = this.authorInfo.get(authorKey);
 				author.books.push(bookInfo);
-				if (wasRead) {
-					author.booksRead.push(bookInfo);
-					author.read = true;
-				}
 			});
 		}
 
-		for (const yearKey in this.readingListData) {
+		for (const seriesKey in seriesData) {
+			const series: SeriesData = seriesData[seriesKey];
+			const size = series.books.length;
+			const percent = 100 / size;
+			let years: number[] = [];
+			const bookSeriesInfo: BookSeriesInfoModel = {
+				key: seriesKey,
+				percent,
+				isLast: false
+			}
+			const seriesAuthorKeys: string[] = [];
+			series.books.forEach(bookKey => {
+				const book = this.bookInfo.get(bookKey);
+				book.series = bookSeriesInfo;
+				book.series.isLast = bookKey === series.books[size - 1];
+				book.authorKeys.forEach(bookAuthorKey => {
+					if (!seriesAuthorKeys.includes(bookAuthorKey)) {
+						seriesAuthorKeys.push(bookAuthorKey);
+					};
+				});
+				years.push(book.year);
+			});
+			const seriesInfo: SeriesInfoModel = {
+				key: seriesKey,
+				title: series.name,
+				size,
+				bookKeys: series.books,
+				authorKeys: seriesAuthorKeys,
+				yearFirst: Math.min(...years),
+				yearLast: Math.max(...years)
+			}
+			this.seriesInfo.set(seriesKey, seriesInfo);
+		}
+
+		for (const yearKey in readingListData) {
+			const bookKeys: string[] = readingListData[yearKey];
 			const readingListInfo: ReadingListInfo = {
 				year: yearKey,
-				books: this.readingListData[yearKey].map(bookKey => this.bookInfo.get(bookKey)),
-				count: this.readingListData[yearKey].length
+				books: bookKeys.map(bookKey => this.bookInfo.get(bookKey)),
+				count: bookKeys.length
 			};
 			this.readingListInfo.set(yearKey, readingListInfo);
+
+			bookKeys.forEach(bookKey => {
+				const book = this.bookInfo.get(bookKey);
+				book.yearsRead.push(Number(yearKey));
+				book.authorKeys.forEach(authorKey => {
+					const author = this.authorInfo.get(authorKey);
+					if (!author.booksRead.includes(book)) {
+						author.booksRead.push(book);
+					}
+					author.read = true;
+				});
+			});
 		}
 	}
 
 	@computed
 	get taggedAwards() {
 		return Object.entries(this.filters.award).filter(([_, show]) => show).map(([key]) => key);
+	}
+
+	@computed
+	get filterYearStart() {
+		return this.filters.yearStart || 0;
+	}
+
+	@computed
+	get filterYearEnd() {
+		return this.filters.yearEnd || 3000;
 	}
 
 	@computed
@@ -125,14 +173,10 @@ export class BookAppStore {
 	}
 
 	filter(books: BookInfoModel[]) {
-		let filteredBooks = books.filter(book => this.filters.genre[book.genre]);
-		if (this.filters.yearStart) {
-			filteredBooks = filteredBooks.filter(book => book.year >= this.filters.yearStart);
-		}
-		if (this.filters.yearEnd) {
-			filteredBooks = filteredBooks.filter(book => book.year <= this.filters.yearEnd);
-		}
-		return filteredBooks;
+		return books
+			.filter(book => this.filters.genre[book.genre])
+			.filter(book => book.year >= this.filterYearStart)
+			.filter(book => book.year <= this.filterYearEnd);
 	}
 
 	@computed
@@ -183,7 +227,11 @@ export class BookAppStore {
 	}
 
 	getBook(bookKey: string): BookInfoModel {
-		return this.bookInfo[bookKey];
+		return this.bookInfo.get(bookKey);
+	}
+
+	getSeries(seriesKey: string): SeriesInfoModel {
+		return this.seriesInfo.get(seriesKey);
 	}
 
 	getBookAwards(bookKey: string): string[] {
@@ -194,32 +242,6 @@ export class BookAppStore {
 			}
 		});
 		return awards;
-	}
-
-	getBookYearsRead(bookKey: string): number[] {
-		let years: number[] = [];
-		for (const year in this.readingListData) {
-			if (this.readingListData[year].includes(bookKey)) {
-				years.push(Number(year));
-			}
-		}
-		return years;
-	}
-
-	getBookSeries(bookKey: string): SeriesInfoModel {
-		for (const seriesKey in this.seriesData) {
-			const series = this.seriesData[seriesKey];
-			if (series.books.includes(bookKey)) {
-				const seriesBooks = series.books;
-				const seriesInfo: SeriesInfoModel = {
-					key: seriesKey,
-					size: seriesBooks.length,
-					isLast: seriesBooks[seriesBooks.length - 1] === bookKey
-				}
-				return seriesInfo;
-			}
-		}
-		return undefined;
 	}
 
 	getBookAlphabeticalTitle(title: string): string {

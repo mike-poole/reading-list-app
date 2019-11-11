@@ -17,7 +17,7 @@ export class BookList extends React.Component<Props, object> {
 
 		return (
 			store.bookList.map(book =>
-				<Book key={book.key} book={book}/>
+				<Book key={book.key} bookKey={book.key}/>
 			)
 		);
 	}

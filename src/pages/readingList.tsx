@@ -83,7 +83,7 @@ export class ReadingList extends React.Component<Props, object> {
 							<div className="expansionDetails">
 								{store.filter(entry.books).map(book => {
 									return (
-										<Book key={book.key} book={book}/>
+										<Book key={`${entry.year}-${book.key}`} bookKey={book.key}/>
 									)
 								})}
 							</div>

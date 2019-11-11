@@ -2,7 +2,7 @@
 
 export interface BookData {
 	name: string;
-	author: string;
+	author: string | string[];
 	year: number;
 	cat: string;
 }
@@ -28,6 +28,7 @@ export interface GenreData {
 
 export interface SeriesData {
 	name: string;
+	author: string;
 	books: string[];
 }
 
@@ -37,13 +38,13 @@ export interface BookInfoModel {
 	key: string;
 	title: string;
 	alphaTitle: string;
-	authorKey: string;
+	authorKeys: string[];
 	authorName: string;
 	year: number;
 	genre: string;
 	awards?: string[];
 	yearsRead?: number[];
-	series?: SeriesInfoModel;
+	series?: BookSeriesInfoModel;
 }
 
 export interface AwardInfoModel {
@@ -72,8 +73,12 @@ export interface GenreInfoModel {
 
 export interface SeriesInfoModel {
 	key: string;
+	title: string;
 	size: number;
-	isLast: boolean;
+	bookKeys: string[];
+	authorKeys: string[];
+	yearFirst: number;
+	yearLast: number;
 }
 
 export interface ReadingListInfo {
@@ -83,6 +88,12 @@ export interface ReadingListInfo {
 }
 
 // Miscellany
+
+export interface BookSeriesInfoModel {
+	key: string;
+	percent: number;
+	isLast: boolean;
+}
 
 export interface FilterModel {
 	award?: {};

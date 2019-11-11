@@ -84,7 +84,7 @@ export class AuthorList extends React.Component<Props, object> {
 								<div className="expansionDetails">
 									{store.filter(author.booksRead).map(book => {
 										return (
-											<Book key={book.key} book={book}/>
+											<Book key={book.key} bookKey={book.key}/>
 										)
 									})}
 								</div>

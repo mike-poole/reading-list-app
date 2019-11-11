@@ -4,7 +4,7 @@ import { inject, observer } from 'mobx-react';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import { BookAppStore } from '../bookAppStore';
-import { Book } from '../components/book';
+import { Work } from '../components/work';
 
 interface Props {
 	bookAppStore?: BookAppStore;
@@ -26,15 +26,16 @@ export class AwardsList extends React.Component<Props, object> {
 		return Object.keys(store.awardInfo[this.currentAward].books).length;
 	}
 
-	renderBook(bookKey, store) {
-		if (bookKey.indexOf('[NA') >= 0) {
+	renderWork(key: string) {
+		const { bookAppStore: store } = this.props;
+		if (key.indexOf('[NA') >= 0) {
 			return (
 				<div className='book'>No award</div>
 			);
 		} else {
 			return (
 				<div>
-					<Book key={bookKey} book={store.getBook(bookKey)}/>
+					<Work workKey={key}/>
 				</div>
 			);
 		}
@@ -52,14 +53,14 @@ export class AwardsList extends React.Component<Props, object> {
 					onChange={this.onChangeAward}
 				>
 					{store.awardList.map(award =>
-						<MenuItem value={award.key}>
+						<MenuItem key={award.key} value={award.key}>
 							{award.name}
 						</MenuItem>
 					)}
 				</Select>
-				{Object.keys(store.awardInfo[this.currentAward].books).map(bookKey =>
-					<div>
-						{this.renderBook(bookKey, store)}
+				{Object.keys(store.awardInfo.get(this.currentAward).books).map(bookKey =>
+					<div key={bookKey}>
+						{this.renderWork(bookKey)}
 					</div>
 				)}
 			</React.Fragment>

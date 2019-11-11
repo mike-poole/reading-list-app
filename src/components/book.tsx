@@ -1,19 +1,22 @@
 import React from 'react';
-import { observer } from 'mobx-react';
+import { observer, inject } from 'mobx-react';
+import { BookAppStore } from '../bookAppStore';
 import { BookInfoModel } from '../models/model';
 import { AwardTags } from './awardTags';
 import '../styles/bookApp.scss';
 
 interface Props {
-	book: BookInfoModel;
+	bookAppStore?: BookAppStore;
+	bookKey: string;
 }
 
-@observer
+@inject('bookAppStore') @observer
 export class Book extends React.Component<Props, object> {
 
 	render() {
 
-		const { book } = this.props;
+		const { bookKey, bookAppStore: store } = this.props;
+		const book: BookInfoModel = store.getBook(bookKey);
 	
 		return (
 			<div className='book'>
