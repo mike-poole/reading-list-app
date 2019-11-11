@@ -2,13 +2,22 @@ import React from 'react';
 import { inject, observer } from 'mobx-react';
 import TextField from '@material-ui/core/TextField';
 import Divider from '@material-ui/core/Divider';
+import { BookAppStore } from '../bookAppStore';
 import '../styles/bookApp.scss';
 
-@inject('bookAppStore') @observer
-export class YearRangeSelector extends React.Component {
+interface Props {
+	bookAppStore?: BookAppStore;
+}
 
-	onChange = key => event => {
-		this.props.bookAppStore.setYearFilter(key, event.target.value);
+@inject('bookAppStore') @observer
+export class YearRangeSelector extends React.Component<Props, object> {
+
+	onYearStartChange = event => {
+		this.props.bookAppStore.setYearStartFilter(event.target.value);
+	}
+
+	onYearEndChange = event => {
+		this.props.bookAppStore.setYearEndFilter(event.target.value);
 	}
 
 	render() {
@@ -22,16 +31,16 @@ export class YearRangeSelector extends React.Component {
 					<TextField
 						id='yearStart'
 						type='number'
-						onChange={this.onChange('start')}
-						value={store.filters.year.start}
+						onChange={this.onYearStartChange}
+						value={store.filters.yearStart}
 					/>
 					<br/>
 					<div className='rangeLabel'>To</div>
 					<TextField
 						id='yearEnd'
 						type='number'
-						onChange={this.onChange('end')}
-						value={store.filters.year.end}
+						onChange={this.onYearEndChange}
+						value={store.filters.yearEnd}
 					/>
 				</div>
 			</div>

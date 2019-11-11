@@ -8,8 +8,16 @@ module.exports = {
 		path: DIST_DIR,
 		filename: "main.js"
 	},
+	resolve: {
+		extensions: ['.ts', '.tsx', '.js']
+	},
 	module: {
 		rules: [
+			{
+				test: /\.tsx?$/,
+				exclude: /node_modules/,
+				use: ["babel-loader", "ts-loader"]
+			},
 			{
 				test: /\.jsx?$/,
 				exclude: /node_modules/,

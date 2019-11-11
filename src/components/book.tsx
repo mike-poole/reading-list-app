@@ -1,8 +1,15 @@
 import React from 'react';
-import { AwardTags } from './awardTags.jsx';
+import { observer } from 'mobx-react';
+import { BookInfoModel } from '../models/model';
+import { AwardTags } from './awardTags';
 import '../styles/bookApp.scss';
 
-export class Book extends React.Component {
+interface Props {
+	book: BookInfoModel;
+}
+
+@observer
+export class Book extends React.Component<Props, object> {
 
 	render() {
 
@@ -13,7 +20,7 @@ export class Book extends React.Component {
 				<span className='title'>{book.title}</span>
 				<span className='author'>{book.authorName}</span>
 				<span className='year'>{book.year}</span>
-				<AwardTags key={book.key} awards={book.awards}/>
+				<AwardTags bookKey={book.key} awards={book.awards}/>
 			</div>
 		);
 	}

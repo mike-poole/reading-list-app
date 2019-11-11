@@ -1,0 +1,22 @@
+{
+	"compilerOptions": {
+		"module": "esnext",
+		"target": "es2016",
+		"jsx": "preserve",
+		"allowSyntheticDefaultImports": true,
+		"experimentalDecorators": true,
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"lib": [
+			"es2017", "dom"
+		]
+	},
+	"exclude": [
+		"node_modules",
+		"dist"
+	],
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.tsx"
+	]
+}

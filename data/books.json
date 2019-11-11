@@ -117,6 +117,7 @@
     "CM-THIaL" : { "name" : "The Heart Is a Lonely Hunter", "author" : "McCa", "year" : 1940, "cat" : "f" },
     "CM-LiHB"  : { "name" : "Lamb in His Bosom", "author" : "MiCa", "year" : 1933, "cat" : "f" },
     "CM-LtGWS" : { "name" : "Let the Great World Spin", "author" : "McCm", "year" : 2009, "cat" : "f" },
+    "CM-PSS"   : { "name" : "Perdido Street Station", "author" : "MiCh", "year" : 2003, "cat" : "f" },
     "CR-TT"    : { "name" : "The Town", "author" : "RiCo", "year" : 1950, "cat" : "f" },
     "CR-TWoK"  : { "name" : "The Waters of Kronos", "author" : "RiCo", "year" : 1960, "cat" : "f" },
     "CS-TSD"   : { "name" : "The Stone Diaries", "author" : "ShCa", "year" : 1993, "cat" : "f" },
@@ -140,6 +141,7 @@
     "DE-HWAH"  : { "name" : "How We Are Hungry", "author" : "EgDa", "year" : 2004, "cat" : "f" },
     "DE-WItW"  : { "name" : "What Is the What", "author" : "EgDa", "year" : 2006, "cat" : "f" },
     "DE-Z"     : { "name" : "Zeitoun", "author" : "EgDa", "year" : 2009, "cat" : "f" },
+    "DE-AHftK" : { "name" : "A Hologram for the King", "author" : "EgDa", "year" : 2012, "cat" : "f" },
 
     "DL-SaL"   : { "name" : "Sons and Lovers", "author" : "LaDH", "year" : 1913, "cat" : "f" },
     "DL-TR"    : { "name" : "The Rainbow", "author" : "LaDH", "year" : 1915, "cat" : "f" },
@@ -154,7 +156,11 @@
     "DS-TT"    : { "name" : "The Terror", "author" : "SiDn", "year" : 2007, "cat" : "f" },
     "DS-D"     : { "name" : "Drood", "author" : "SiDn", "year" : 2009, "cat" : "f" },
 
-    "DB-ATotC" : { "name" : "A Tour of the Calculus", "author" : "BeDa", "year" : 1995, "cat" : "n" },
+    "DT-TSH"   : { "name" : "The Secret History", "author" : "TaDo", "year" : 1992, "cat" : "f" },
+    "DT-TLF"   : { "name" : "The Little Friend", "author" : "TaDo", "year" : 2002, "cat" : "f" },
+    "DT-TG"    : { "name" : "The Goldfinch", "author" : "TaDo", "year" : 2013, "cat" : "f" },
+
+	"DB-ATotC" : { "name" : "A Tour of the Calculus", "author" : "BeDa", "year" : 1995, "cat" : "n" },
     "DB-TCI"   : { "name" : "The Chaneysville Incident", "author" : "BrDv", "year" : 1981, "cat" : "f" },
     "DB-TDVC"  : { "name" : "The Da Vinci Code", "author" : "BrDa", "year" : 2003, "cat" : "f" },
     "DD-R"     : { "name" : "Rebecca", "author" : "duDa", "year" : 1938, "cat" : "f" },
@@ -170,7 +176,6 @@
     "DL-TGN"   : { "name" : "The Golden Notebook", "author" : "LeDo", "year" : 1962, "cat" : "f" },
     "DM-1776"  : { "name" : "1776", "author" : "McDa", "year" : 2005, "cat" : "n" },
     "DS-BatLC" : { "name" : "Balzac and the Little Chinese Seamstress", "author" : "SiDa", "year" : 2000, "cat" : "f" },
-    "DT-TG"    : { "name" : "The Goldfinch", "author" : "TaDo", "year" : 2013, "cat" : "f" },
     "DW-IJ"    : { "name" : "Infinite Jest", "author" : "WaDa", "year" : 1996, "cat" : "f" },
 
     "ED-WtHT"  : { "name" : "Welcome to Hard Times", "author" : "DoEL", "year" : 1960, "cat" : "f" },
@@ -202,6 +207,9 @@
     "EH-AtRai" : { "name" : "Across the River and into the Trees", "author" : "HeEr", "year" : 1950, "cat" : "f" },
     "EH-TOMaS" : { "name" : "The Old Man and the Sea", "author" : "HeEr", "year" : 1952, "cat" : "f" },
 
+    "EL-TDitW" : { "name" : "The Devil in the White City", "author" : "LaEr", "year" : 2004, "cat" : "l" },
+    "EL-InGoB" : { "name" : "In the Garden of Beasts", "author" : "LaEr", "year" : 2011, "cat" : "l" },
+
     "EW-HoM"   : { "name" : "House of Mirth", "author" : "WhEd", "year" : 1905, "cat" : "f" },
     "EW-ToMaG" : { "name" : "Tales of Men and Ghosts", "author" : "WhEd", "year" : 1910, "cat" : "f" },
     "EW-EF"    : { "name" : "Ethan Frome", "author" : "WhEd", "year" : 1911, "cat" : "f" },
@@ -219,7 +227,6 @@
     "EG-ITOL"  : { "name" : "In This Our Life", "author" : "GlEl", "year" : 1941, "cat" : "f" },
     "EG-VOJ"   : { "name" : "Victory Over Japan", "author" : "GiEl", "year" : 1984, "cat" : "f" },
     "EJ-TKW"   : { "name" : "The Known World", "author" : "JoEd", "year" : 2003, "cat" : "f" },
-    "EL-TDitW" : { "name" : "The Devil in the White City", "author" : "LaEr", "year" : 2004, "cat" : "f" },
     "EO-TEoS"  : { "name" : "The Edge of Sadness", "author" : "OCEd", "year" : 1961, "cat" : "f" },
     "EP-BVNSS" : { "name" : "Binocular Vision: New and Selected Stories", "author" : "PeEd", "year" : 2011, "cat" : "f" },
     "EP-HF"    : { "name" : "His Family", "author" : "PoEr", "year" : 1917, "cat" : "f" },
@@ -244,6 +251,8 @@
     "FK-TT"    : { "name" : "The Trial", "author" : "KaFr", "year" : 1915, "cat" : "f" },
     "FK-TC"    : { "name" : "The Castle", "author" : "KaFr", "year" : 1922, "cat" : "f" },
 
+    "FF-ITSS"  : { "name" : "Into That Silent Sea: Trailblazers of the Space Era, 1961-1965", "author" : ["FrFr", "BuCo"], "year" : 2009, "cat" : "n" },
+    "FF-ItSot" : { "name" : "In the Shadow of the Moon: A Challenging Journey to Tranquility, 1965-1969", "author" : ["FrFr", "BuCo"], "year" : 2010, "cat" : "n" },
     "FF-TGS"   : { "name" : "The Good Soldier", "author" : "FoFo", "year" : 1915, "cat" : "f" },
     "FF-PE"    : { "name" : "Parade's End", "author" : "FoFo", "year" : 1928, "cat" : "f" },
     "FH-D"     : { "name" : "Dune", "author" : "HeFr", "year" : 1965, "cat" : "f" },
@@ -576,7 +585,7 @@
     "MS-BT"    : { "name" : "Blood Tie", "author" : "SeMa", "year" : 1977, "cat" : "f" },
     "MS-F"     : { "name" : "Frankenstein", "author" : "ShMa", "year" : 1818, "cat" : "f" },
     "MS-OLN"   : { "name" : "One Lonely Night", "author" : "SpMi", "year" : 1951, "cat" : "f" },
-    "MS-TKA"   : { "name" : "The Killer Angels", "author" : "ShMi", "year" : 1974, "cat" : "f" },
+    "MS-TKA"   : { "name" : "The Killer Angels", "author" : "ShMi", "year" : 1974, "cat" : "l" },
     "MS-TSoL"  : { "name" : "The Stuff of Life", "author" : "ScMa", "year" : 2009, "cat" : "n" },
     "MS-TPoMJ" : { "name" : "The Prime of Miss Jean Brodie", "author" : "SpMu", "year" : 1961, "cat" : "f" },
     "MS-WiaVS" : { "name" : "Working in a Very Small Place", "author" : "ShMk", "year" : 1989, "cat" : "n" },

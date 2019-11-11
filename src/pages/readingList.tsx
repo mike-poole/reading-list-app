@@ -5,43 +5,48 @@ import Button from '@material-ui/core/Button';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import { Book } from '../components/book.jsx';
-import { SummaryAwardTags } from '../components/awardTags.jsx';
+import { BookAppStore } from '../bookAppStore';
+import { Book } from '../components/book';
+import { SummaryAwardTags } from '../components/awardTags';
 import '../styles/bookApp.scss';
 import { Badge } from '@material-ui/core';
 
-@inject('bookAppStore') @observer
-export class ReadingList extends React.Component {
+interface Props {
+	bookAppStore?: BookAppStore;
+}
 
-	@observable expanded = {};
+@inject('bookAppStore') @observer
+export class ReadingList extends React.Component<Props, object> {
+
+	@observable expanded: Map<string, boolean> = new Map();
 
 	componentDidMount() {
 		const { bookAppStore: store } = this.props;
-		Object.keys(store.readingList).forEach(year => {
-			this.expanded[year] = true;
+		store.readingListInfo.forEach(value => {
+			this.expanded.set(value.year, true);
 		});
 	}
 
 	@action
 	onClickPanel = year => () => {
-		this.expanded[year] = !this.expanded[year];
+		this.expanded.set(year, !this.expanded.get(year));
 	}
 
 	@action
 	onExpandAll = expand => {
-		for (const year in this.expanded) {
-			this.expanded[year] = expand;
-		}
+		this.expanded.forEach((_, key) => {
+			this.expanded.set(key, expand);
+		});
 	}
 
 	@computed
-	get allExpanded() {
-		return Object.entries(this.expanded).map(entry => entry[1]).reduce((accum, expanded) => expanded && accum, true);
+	get allExpanded(): boolean {
+		return Array.from(this.expanded.values()).reduce((accum, expanded) => expanded && accum, true);
 	}
 
 	@computed
-	get allCollapsed() {
-		return Object.entries(this.expanded).map(entry => entry[1]).reduce((accum, expanded) => !expanded && accum, true);
+	get allCollapsed(): boolean {
+		return Array.from(this.expanded.values()).reduce((accum, expanded) => !expanded && accum, true);
 	}
 
 	render() {
@@ -54,19 +59,19 @@ export class ReadingList extends React.Component {
 					<Button disabled={this.allExpanded} onClick={() => this.onExpandAll(true)}>Expand All</Button>
 					<Button disabled={this.allCollapsed} onClick={() => this.onExpandAll(false)}>Collapse All</Button>
 				</div>
-				{Object.keys(store.readingList).map(year =>
+				{Array.from(store.readingListInfo.values()).map(entry =>
 					<ExpansionPanel
-						key={`${year}-panel`}
-						expanded={!!this.expanded[year]}
+						key={`${entry.year}-panel`}
+						expanded={!!this.expanded.get(entry.year)}
 						classes={{root: 'expansionPanel'}}
-						onChange={this.onClickPanel(year)}
+						onChange={this.onClickPanel(entry.year)}
 					>
 						<ExpansionPanelSummary>
-							<div className="summaryLeft">{year}</div>
+							<div className="summaryLeft">{entry.year}</div>
 							<div className="summaryRight">
-								<SummaryAwardTags id={year} list={store.readingList[year].books}/>
+								<SummaryAwardTags id={entry.year} books={entry.books}/>
 								<Badge 
-									badgeContent={store.readingList[year].count}
+									badgeContent={store.filter(entry.books).length}
 									color='primary'
 									classes={{ badge: 'summaryBadge', root: 'summaryBadgeRoot' }}
 								>
@@ -76,7 +81,7 @@ export class ReadingList extends React.Component {
 						</ExpansionPanelSummary>
 						<ExpansionPanelDetails classes={{root: 'expansionDetailsRoot'}}>
 							<div className="expansionDetails">
-								{store.readingList[year].books.map(book => {
+								{store.filter(entry.books).map(book => {
 									return (
 										<Book key={book.key} book={book}/>
 									)

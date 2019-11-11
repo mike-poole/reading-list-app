@@ -9,21 +9,26 @@ import Tab from '@material-ui/core/Tab';
 import Toolbar from '@material-ui/core/Toolbar'
 import MenuIcon from '@material-ui/icons/Menu';
 import { BookAppStore } from './bookAppStore';
-import { FlyoutMenu } from './flyout/flyoutMenu.jsx';
-import { ReadingList } from './pages/readingList.jsx';
-import { AuthorList } from './pages/authorList.jsx';
-import { BookList } from './pages/bookList.jsx';
+import { FlyoutMenu } from './flyout/flyoutMenu';
+import { ReadingList } from './pages/readingList';
+import { AuthorList } from './pages/authorList';
+import { BookList } from './pages/bookList';
+import { AwardsList } from './pages/awardsList';
 import './styles/bookApp.scss';
 
+interface Props {
+
+}
+
 @observer
-export class BookApp extends React.Component {
+export class BookApp extends React.Component<Props, object> {
 
 	@observable store;
 	@observable activeTab = 0;
 	@observable drawerOpen = false;
 
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		this.store = new BookAppStore();
 	}
 
@@ -63,6 +68,7 @@ export class BookApp extends React.Component {
 								<Tab label="Reading List"/>
 								<Tab label="Authors"/>
 								<Tab label="Books"/>
+								<Tab label="Awards"/>
 							</Tabs>
 						</Toolbar>
 					</AppBar>
@@ -76,6 +82,9 @@ export class BookApp extends React.Component {
 						}
 						{ this.activeTab === 2 &&
 							<BookList/>
+						}
+						{ this.activeTab === 3 &&
+							<AwardsList/>
 						}
 					</div>
 				</div>
