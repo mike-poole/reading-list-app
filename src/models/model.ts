@@ -79,6 +79,7 @@ export interface SeriesInfoModel {
 	authorKeys: string[];
 	yearFirst: number;
 	yearLast: number;
+	readPct: number;
 }
 
 export interface ReadingListInfo {

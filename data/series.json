@@ -25,5 +25,5 @@
         "books" : [ "AP-AQoU", "AP-ABM", "AP-TAW", "AP-ALM", "AP-CCR", "AP-TKO", "AP-TVoB", "AP-TSA", "AP-TMP", "AP-BDFaR", "AP-TK", "AP-HSH" ] },
     "LD-TAQ" : {
         "name" : "The Alexandria Quartet",
-        "books" : [ "LD-J", "LD-C", "LD-M", "LD-C" ] }
+        "books" : [ "LD-J", "LD-B", "LD-M", "LD-C" ] }
 }

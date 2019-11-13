@@ -93,40 +93,6 @@ export class BookAppStore {
 			});
 		}
 
-		for (const seriesKey in seriesData) {
-			const series: SeriesData = seriesData[seriesKey];
-			const size = series.books.length;
-			const percent = 100 / size;
-			let years: number[] = [];
-			const bookSeriesInfo: BookSeriesInfoModel = {
-				key: seriesKey,
-				percent,
-				isLast: false
-			}
-			const seriesAuthorKeys: string[] = [];
-			series.books.forEach(bookKey => {
-				const book = this.bookInfo.get(bookKey);
-				book.series = bookSeriesInfo;
-				book.series.isLast = bookKey === series.books[size - 1];
-				book.authorKeys.forEach(bookAuthorKey => {
-					if (!seriesAuthorKeys.includes(bookAuthorKey)) {
-						seriesAuthorKeys.push(bookAuthorKey);
-					};
-				});
-				years.push(book.year);
-			});
-			const seriesInfo: SeriesInfoModel = {
-				key: seriesKey,
-				title: series.name,
-				size,
-				bookKeys: series.books,
-				authorKeys: seriesAuthorKeys,
-				yearFirst: Math.min(...years),
-				yearLast: Math.max(...years)
-			}
-			this.seriesInfo.set(seriesKey, seriesInfo);
-		}
-
 		for (const yearKey in readingListData) {
 			const bookKeys: string[] = readingListData[yearKey];
 			const readingListInfo: ReadingListInfo = {
@@ -147,6 +113,43 @@ export class BookAppStore {
 					author.read = true;
 				});
 			});
+		}
+
+		for (const seriesKey in seriesData) {
+			const series: SeriesData = seriesData[seriesKey];
+			const size = series.books.length;
+			const percent = 100 / size;
+			let readSize = 0;
+			let years: number[] = [];
+			const bookSeriesInfo: BookSeriesInfoModel = {
+				key: seriesKey,
+				percent,
+				isLast: false
+			}
+			const seriesAuthorKeys: string[] = [];
+			series.books.forEach(bookKey => {
+				const book = this.bookInfo.get(bookKey);
+				book.series = bookSeriesInfo;
+				book.series.isLast = bookKey === series.books[size - 1];
+				book.authorKeys.forEach(bookAuthorKey => {
+					if (!seriesAuthorKeys.includes(bookAuthorKey)) {
+						seriesAuthorKeys.push(bookAuthorKey);
+					};
+				});
+				readSize += (book.yearsRead.length > 0) ? 1 : 0;
+				years.push(book.year);
+			});
+			const seriesInfo: SeriesInfoModel = {
+				key: seriesKey,
+				title: series.name,
+				size,
+				bookKeys: series.books,
+				authorKeys: seriesAuthorKeys,
+				yearFirst: Math.min(...years),
+				yearLast: Math.max(...years),
+				readPct: readSize / size
+			}
+			this.seriesInfo.set(seriesKey, seriesInfo);
 		}
 	}
 
@@ -232,6 +235,18 @@ export class BookAppStore {
 
 	getSeries(seriesKey: string): SeriesInfoModel {
 		return this.seriesInfo.get(seriesKey);
+	}
+
+	getWasRead(key: string): number {
+		const series = this.getSeries(key);
+		if (series) {
+			return series.readPct;
+		}
+		const book = this.getBook(key);
+		if (book) {
+			return book.yearsRead.length > 0 ? 1 : 0;
+		}
+		return 0;
 	}
 
 	getBookAwards(bookKey: string): string[] {

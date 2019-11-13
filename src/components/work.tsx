@@ -8,6 +8,7 @@ import '../styles/bookApp.scss';
 interface Props {
 	bookAppStore?: BookAppStore;
 	workKey: string;
+	checked?: boolean;
 }
 
 @inject('bookAppStore') @observer
@@ -19,11 +20,11 @@ export class Work extends React.Component<Props, object> {
 
 		if (store.seriesInfo.has(workKey)) {
 			return (
-				<Series key={workKey} seriesKey={workKey}/>
+				<Series key={workKey} seriesKey={workKey} sublist checked/>
 			);
 		} else {
 			return (
-				<Book key={workKey} bookKey={workKey}/>
+				<Book key={workKey} bookKey={workKey} checked/>
 			)
 		}
 	}
