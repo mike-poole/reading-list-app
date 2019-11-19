@@ -60,7 +60,8 @@ export class AuthorList extends React.Component<Props, object> {
 					<Button disabled={this.allCollapsed} onClick={() => this.onExpandAll(false)}>Collapse All</Button>
 				</div>
 				{store.authorList.map(author => {
-					return (
+					const books = store.filter(author.booksRead);
+					return (books.length > 0 &&
 						<ExpansionPanel
 							key={`${author.key}-panel`}
 							expanded={!!this.expanded.get(author.key)}
@@ -72,7 +73,7 @@ export class AuthorList extends React.Component<Props, object> {
 								<div className="summaryRight">
 									<SummaryAwardTags id={author.key} books={author.booksRead}/>
 									<Badge 
-										badgeContent={store.filter(author.booksRead).length}
+										badgeContent={books.length}
 										color='primary'
 										classes={{ badge: 'summaryBadge', root: 'summaryBadgeRoot' }}
 									>
@@ -82,7 +83,7 @@ export class AuthorList extends React.Component<Props, object> {
 							</ExpansionPanelSummary>
 							<ExpansionPanelDetails classes={{root: 'expansionDetailsRoot'}}>
 								<div className="expansionDetails">
-									{store.filter(author.booksRead).map(book => {
+									{books.map(book => {
 										return (
 											<Book key={book.key} bookKey={book.key}/>
 										)

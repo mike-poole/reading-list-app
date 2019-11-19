@@ -56,7 +56,7 @@ interface SummaryAwardTagProps {
 class SummaryAwardTag extends React.Component<SummaryAwardTagProps, object> {
 	render() {
 		const { bookAppStore: store, books, award } = this.props;
-		const count = books.reduce((accum, book) => accum + (book.awards.includes(award) ? 1 : 0), 0);
+		const count = store.filter(books).reduce((accum, book) => accum + (book.awards.includes(award) ? 1 : 0), 0);
 		if (count > 0) {
 			const className = store.awardInfo.get(award).type === 'annual' ? 'awardTagAnnual' : 'awardTagTop100';
 			return (

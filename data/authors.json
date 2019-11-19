@@ -47,6 +47,7 @@
     "BuPe" : { "lastName" : "Buck", "firstName" : "Pearl S.",			"sex" : "f", "born" : 1892, "died" : 1973 },
     "BuSa" : { "lastName" : "Butler", "firstName" : "Samuel",			"sex" : "m", "born" : 1835, "died" : 1902 },
     "BuRo" : { "lastName" : "Butler","firstName" : "Robert Olen",		"sex" : "m", "born" : 1920, "died" : 2012 },
+    "BuAa" : { "lastName" : "Burns", "firstName" : "Anna",				"sex" : "f", "born" : 1962 },
     "BuWi" : { "lastName" : "Burroughs", "firstName" : "William S.",	"sex" : "m", "born" : 1945 },
     "ByAS" : { "lastName" : "Byatt", "firstName" : "A. S.",				"sex" : "f", "born" : 1936 },
     
@@ -221,6 +222,7 @@
     "LeCS" : { "lastName" : "Lewis", "firstName" : "C. S.", 			"sex" : "m" },
     "LeDo" : { "lastName" : "Lessing", "firstName" : "Doris",			"sex" : "f" },
     "LeHa" : { "lastName" : "Lee", "firstName" : "Harper", 				"sex" : "f" },
+    "LeUr" : { "lastName" : "Le Guin", "firstName" : "Ursula K.", 		"sex" : "f", "born" : 1929, "died": 2018 },
     "LeJo" : { "lastName" : "Lethem", "firstName" : "Jonathan", 		"sex" : "m" },
     "leJo" : { "lastName" : "le Carre", "firstName" : "John",			"sex" : "m" },
     "LeLa" : { "lastName" : "Lebo", "firstName" : "Lauri", 				"sex" : "m" },
@@ -275,6 +277,7 @@
     "NaVS" : { "lastName" : "Naipaul", "firstName" : "V. S.",			"sex" : "m" },
     "NgVi" : { "lastName" : "Nguyen", "firstName" : "Viet Thanh",		"sex" : "m" },
     "NiAn" : { "lastName" : "Nin", "firstName" : "Anaïs", 				"sex" : "f" },
+    "NuSi" : { "lastName" : "Nunez", "firstName" : "Sigrid", 			"sex" : "f", "born" : 1951 },
     
     "OaJo" : { "lastName" : "Oates", "firstName" : "Joyce Carol", 		"sex" : "f" },
     "OBFl" : { "lastName" : "O'Brien", "firstName" : "Flann",			"sex" : "m" },
@@ -304,7 +307,7 @@
     "PoEr" : { "lastName" : "Poole", "firstName" : "Ernest", 			"sex" : "m" },
     "PoJF" : { "lastName" : "Powers", "firstName" : "J. F.",			"sex" : "m" },
     "PoKa" : { "lastName" : "Porter", "firstName" : "Katherine Anne",	"sex" : "f" },
-    "PoRi" : { "lastName" : "Powers", "firstName" : "Richard",			"sex" : "m" },
+    "PoRi" : { "lastName" : "Powers", "firstName" : "Richard",			"sex" : "m", "born" : 1957 },
     "PrAn" : { "lastName" : "Proulx", "firstName" : "Annie", 			"sex" : "f" },
     "PrHu" : { "lastName" : "Prather", "firstName" : "Hugh", 			"sex" : "m" },
     "PrRe" : { "lastName" : "Price", "firstName" : "Reynolds", 			"sex" : "m" },
@@ -386,6 +389,7 @@
     "UpJo" : { "lastName" : "Updike", "firstName" : "John", 			"sex" : "m" },
 
     "VaAs" : { "lastName" : "Vance", "firstName" : "Ashlee", 			"sex" : "m" },
+    "VlAz" : { "lastName" : "Van der Vliet Oloomi", "firstName" : "Azareen", "sex" : "f", "born" : 1983 },
     "VoKu" : { "lastName" : "Vonnegut", "firstName" : "Kurt", 			"sex" : "m" },
     "VoWi" : { "lastName" : "Vollman", "firstName" : "William", 		"sex" : "m" },
 

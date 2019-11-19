@@ -10,6 +10,7 @@ import { Book } from '../components/book';
 import { SummaryAwardTags } from '../components/awardTags';
 import '../styles/bookApp.scss';
 import { Badge } from '@material-ui/core';
+import { ReadingListInfo } from '../models/model';
 
 interface Props {
 	bookAppStore?: BookAppStore;
@@ -49,6 +50,42 @@ export class ReadingList extends React.Component<Props, object> {
 		return Array.from(this.expanded.values()).reduce((accum, expanded) => !expanded && accum, true);
 	}
 
+	renderPanel(entry: ReadingListInfo) {
+		const { bookAppStore: store } = this.props;
+		const books = store.filter(entry.books);
+		return (books.length > 0 &&
+			<ExpansionPanel
+				key={`${entry.year}-panel`}
+				expanded={!!this.expanded.get(entry.year)}
+				classes={{root: 'expansionPanel'}}
+				onChange={this.onClickPanel(entry.year)}
+			>
+				<ExpansionPanelSummary>
+					<div className="summaryLeft">{entry.year}</div>
+					<div className="summaryRight">
+						<SummaryAwardTags id={entry.year} books={entry.books}/>
+						<Badge 
+							badgeContent={books.length}
+							color='primary'
+							classes={{ badge: 'summaryBadge', root: 'summaryBadgeRoot' }}
+						>
+							<div>&nbsp;</div>
+						</Badge>
+					</div>
+				</ExpansionPanelSummary>
+				<ExpansionPanelDetails classes={{root: 'expansionDetailsRoot'}}>
+					<div className="expansionDetails">
+						{books.map(book => {
+							return (
+								<Book key={`${entry.year}-${book.key}`} bookKey={book.key}/>
+							)
+						})}
+					</div>
+				</ExpansionPanelDetails>
+			</ExpansionPanel>
+		);
+	}
+
 	render() {
 
 		const { bookAppStore: store } = this.props;
@@ -60,35 +97,7 @@ export class ReadingList extends React.Component<Props, object> {
 					<Button disabled={this.allCollapsed} onClick={() => this.onExpandAll(false)}>Collapse All</Button>
 				</div>
 				{Array.from(store.readingListInfo.values()).map(entry =>
-					<ExpansionPanel
-						key={`${entry.year}-panel`}
-						expanded={!!this.expanded.get(entry.year)}
-						classes={{root: 'expansionPanel'}}
-						onChange={this.onClickPanel(entry.year)}
-					>
-						<ExpansionPanelSummary>
-							<div className="summaryLeft">{entry.year}</div>
-							<div className="summaryRight">
-								<SummaryAwardTags id={entry.year} books={entry.books}/>
-								<Badge 
-									badgeContent={store.filter(entry.books).length}
-									color='primary'
-									classes={{ badge: 'summaryBadge', root: 'summaryBadgeRoot' }}
-								>
-									<div>&nbsp;</div>
-								</Badge>
-							</div>
-						</ExpansionPanelSummary>
-						<ExpansionPanelDetails classes={{root: 'expansionDetailsRoot'}}>
-							<div className="expansionDetails">
-								{store.filter(entry.books).map(book => {
-									return (
-										<Book key={`${entry.year}-${book.key}`} bookKey={book.key}/>
-									)
-								})}
-							</div>
-						</ExpansionPanelDetails>
-					</ExpansionPanel>
+					this.renderPanel(entry)
 				)}
 			</div>
 		);
