@@ -107,7 +107,14 @@
     "CM-NCfOM" : { "name" : "No Country for Old Men", "author" : "McCo", "year" : 2005, "cat" : "f" },
     "CM-TR"    : { "name" : "The Road", "author" : "McCo", "year" : 2007, "cat" : "f" },
 
-    "CA-TDHW"  : { "name" : "The Demon-Haunted World", "author" : "SaCa", "year" : 1996, "cat" : "n" },
+    "CM-PSS"   : { "name" : "Perdido Street Station", "author" : "MiCh", "year" : 2003, "cat" : "f" },
+    "CM-RS"    : { "name" : "Railsea", "author" : "MiCh", "year" : 2012, "cat" : "f" },
+
+    "CW-TUR"   : { "name" : "The Underground Railroad", "author" : "WhCo", "year" : 2016, "cat" : "f" },
+    "CW-TNB"   : { "name" : "The Nickel Boys", "author" : "WhCo", "year" : 2019, "cat" : "f" },
+    "CW-HS"    : { "name" : "Harlem Shuffle", "author" : "WhCo", "year" : 2021, "cat" : "f" },
+
+    "CA-SM"    : { "name" : "Sea Monsters", "author" : "ArCh", "year" : 2019, "cat" : "f" },
     "CA-TFA"   : { "name" : "Things Fall Apart", "author" : "AcCh", "year" : 1958, "cat" : "f" },
     "CB-W"     : { "name" : "Weaveworld", "author" : "BaCl", "year" : 1987, "cat" : "f" },
     "CD-OtOoS" : { "name" : "On the Origin of Species", "author" : "DaCh", "year" : 1859, "cat" : "n" },
@@ -119,12 +126,12 @@
     "CM-THIaL" : { "name" : "The Heart Is a Lonely Hunter", "author" : "McCa", "year" : 1940, "cat" : "f" },
     "CM-LiHB"  : { "name" : "Lamb in His Bosom", "author" : "MiCa", "year" : 1933, "cat" : "f" },
     "CM-LtGWS" : { "name" : "Let the Great World Spin", "author" : "McCm", "year" : 2009, "cat" : "f" },
-    "CM-PSS"   : { "name" : "Perdido Street Station", "author" : "MiCh", "year" : 2003, "cat" : "f" },
     "CR-TT"    : { "name" : "The Town", "author" : "RiCo", "year" : 1950, "cat" : "f" },
     "CR-TWoK"  : { "name" : "The Waters of Kronos", "author" : "RiCo", "year" : 1960, "cat" : "f" },
+    "CS-TDHW"  : { "name" : "The Demon-Haunted World", "author" : "SaCa", "year" : 1996, "cat" : "n" },
     "CS-TSD"   : { "name" : "The Stone Diaries", "author" : "ShCa", "year" : 1993, "cat" : "f" },
     "CS-TMWLC" : { "name" : "The Man Who Loved Children", "author" : "StCh", "year" : 1940, "cat" : "f" },
-    "CW-TUR"   : { "name" : "The Underground Railroad", "author" : "WhCo", "year" : 2016, "cat" : "f" },
+    "CY-IC"    : { "name" : "Interior Chinatown", "author" : "YuCh", "year" : 2020, "cat" : "f" },
 
     "DA-THGtG" : { "name" : "The Hitchhiker’s Guide to the Galaxy", "author" : "AdDo", "year" : 1979, "cat" : "f" },
     "DA-TRatE" : { "name" : "The Restaurant at the End of the Universe", "author" : "AdDo", "year" : 1980, "cat" : "f" },
@@ -157,6 +164,7 @@
     "DS-SoN"   : { "name" : "Summer of Night", "author" : "SiDn", "year" : 1991, "cat" : "f" },
     "DS-TT"    : { "name" : "The Terror", "author" : "SiDn", "year" : 2007, "cat" : "f" },
     "DS-D"     : { "name" : "Drood", "author" : "SiDn", "year" : 2009, "cat" : "f" },
+    "DS-TFH"   : { "name" : "The Fifth Heart", "author" : "SiDn", "year" : 2015, "cat" : "f" },
 
     "DT-TSH"   : { "name" : "The Secret History", "author" : "TaDo", "year" : 1992, "cat" : "f" },
     "DT-TLF"   : { "name" : "The Little Friend", "author" : "TaDo", "year" : 2002, "cat" : "f" },
@@ -223,12 +231,14 @@
 
     "EB-TDotH" : { "name" : "The Death of the Heart", "author" : "BoEl", "year" : 1938, "cat" : "f" },
     "EC-TR"    : { "name" : "Tobacco Road", "author" : "CaEr", "year" : 1932, "cat" : "f" },
+    "ED-EI"    : { "name" : "Everything Inside", "author" : "DaEd", "year" : 2019, "cat" : "f" },
     "EE-TWO"   : { "name" : "The Worm Ouroboros", "author" : "EdER", "year" : 1922, "cat" : "f" },
     "EF-SB"    : { "name" : "So Big", "author" : "FeEd", "year" : 1924, "cat" : "f" },
     "EG-ALBD"  : { "name" : "A Lesson Before Dying", "author" : "GaEr", "year" : 1993, "cat" : "f" },
     "EG-ITOL"  : { "name" : "In This Our Life", "author" : "GlEl", "year" : 1941, "cat" : "f" },
     "EG-VOJ"   : { "name" : "Victory Over Japan", "author" : "GiEl", "year" : 1984, "cat" : "f" },
     "EJ-TKW"   : { "name" : "The Known World", "author" : "JoEd", "year" : 2003, "cat" : "f" },
+    "EK-TH"    : { "name" : "The Historian", "author" : "KoEl", "year" : 2005, "cat" : "f" },
     "EO-TEoS"  : { "name" : "The Edge of Sadness", "author" : "OCEd", "year" : 1961, "cat" : "f" },
     "EP-BVNSS" : { "name" : "Binocular Vision: New and Selected Stories", "author" : "PeEd", "year" : 2011, "cat" : "f" },
     "EP-HF"    : { "name" : "His Family", "author" : "PoEr", "year" : 1917, "cat" : "f" },
@@ -571,6 +581,9 @@
     "MC-TLW"   : { "name" : "The Lost World", "author" : "CrMi", "year" : 1995, "cat" : "f" },
     "MC-A"     : { "name" : "Airframe", "author" : "CrMi", "year" : 1996, "cat" : "f" },
 
+    "MT-AoTS"   : { "name" : "The Adventures of Tom Sawyer", "author" : "TwMa", "year" : 1876, "cat" : "f" },
+    "MT-AoHF"   : { "name" : "Adventures of Huckleberry Finn", "author" : "TwMa", "year" : 1884, "cat" : "f" },
+
     "MA-M"     : { "name" : "Money", "author" : "AmMa", "year" : 1984, "cat" : "f" },
     "MB-YoG"   : { "name" : "Years of Grace", "author" : "BaMa", "year" : 1930, "cat" : "f" },
     "MB-ZD"    : { "name" : "Zuleika Dobson", "author" : "BeMa", "year" : 1911, "cat" : "f" },
@@ -604,6 +617,7 @@
     "NS-OtB"   : { "name" : "On the Beach", "author" : "ShNe", "year" : 1957, "cat" : "f" },
 
     "NA-TMwtG" : { "name" : "The Man with the Golden Arm", "author" : "AlNe", "year" : 1949, "cat" : "f" },
+    "NH-HF"    : { "name" : "High Fidelity", "author" : "HoNi", "year" : 1995, "cat" : "f" },
     "NM-TNatD" : { "name" : "The Naked and the Dead", "author" : "FoFo", "year" : 1948, "cat" : "f" },
     "NM-HMoD"  : { "name" : "House Made of Dawn", "author" : "MoNS", "year" : 1968, "cat" : "f" },
     "NM-TES"   : { "name" : "The Executioner's Song", "author" : "MaNo", "year" : 1979, "cat" : "f" },
@@ -744,6 +758,7 @@
     "SK-WotC"  : { "name" : "Wolves of the Calla", "author" : "KiSt", "year" : 2003, "cat" : "f" },
     "SK-SoS"   : { "name" : "Song of Susannah", "author" : "KiSt", "year" : 2004, "cat" : "f" },
     "SK-TDT"   : { "name" : "The Dark Tower", "author" : "KiSt", "year" : 2004, "cat" : "f" },
+    "SK-UTD"   : { "name" : "Under the Dome", "author" : "KiSt", "year" : 2009, "cat" : "f" },
     "SK-TWTtK" : { "name" : "The Wind Through the Keyhole", "author" : "KiSt", "year" : 2012, "cat" : "f" },
     "SK-J"     : { "name" : "Joyland", "author" : "KiSt", "year" : 2013, "cat" : "f" },
 
@@ -759,6 +774,7 @@
     "SE-GM"    : { "name" : "George Mills", "author" : "ElSt", "year" : 1982, "cat" : "f" },
     "SE-MTB"   : { "name" : "Mrs. Ted Bliss", "author" : "ElSt", "year" : 1995, "cat" : "f" },
     "SB-TWoAF" : { "name" : "The Way of All Flesh", "author" : "BuSa", "year" : 1903, "cat" : "f" },
+    "SC-TE"    : { "name" : "Trust Exercise", "author" : "ChSu", "year" : 2019, "cat" : "f" },
     "SC-TRBoC" : { "name" : "The Red Badge of Courage", "author" : "CrSt", "year" : 1895, "cat" : "f" },
     "SG-TKotH" : { "name" : "The Keepers of the House", "author" : "GrSh", "year" : 1964, "cat" : "f" },
     "SH-ABHoT" : { "name" : "A Brief History of Time", "author" : "HaSt", "year" : 1988, "cat" : "n" },

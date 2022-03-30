@@ -12,6 +12,7 @@
     "AmKi" : { "lastName" : "Amis", "firstName" : "Kingsley",			"sex" : "m", "born" : 1922, "died" : 1995 },
     "AmMa" : { "lastName" : "Amis", "firstName" : "Martin",				"sex" : "m", "born" : 1949 },
     "AnSh" : { "lastName" : "Anderson", "firstName" : "Sherwood",		"sex" : "m", "born" : 1876, "died" : 1941 },
+    "ArCh" : { "lastName" : "Aridjis", "firstName" : "Chloe", 		    "sex" : "f" },
     "AtMa" : { "lastName" : "Atwood", "firstName" : "Margaret", 		"sex" : "f", "born" : 1939 },
     "AuJa" : { "lastName" : "Austen", "firstName" : "Jane", 			"sex" : "f", "born" : 1775, "died" : 1817 },
     
@@ -66,6 +67,7 @@
     "ChKt" : { "lastName" : "Christensen", "firstName" : "Kate",		"sex" : "f", "born" : 1962 },
     "ChMi" : { "lastName" : "Chabon", "firstName" : "Michael",			"sex" : "m", "born" : 1963 },
     "ChRa" : { "lastName" : "Chandler", "firstName" : "Raymond",		"sex" : "m", "born" : 1888, "died" : 1959 },
+    "ChSu" : { "lastName" : "Choi", "firstName" : "Susan",		        "sex" : "f", "born" : 1969 },
     "ClTo" : { "lastName" : "Clancy", "firstName" : "Tom",				"sex" : "m", "born" : 1947, "died" : 2013 },
     "CoJe" : { "lastName" : "Coyne", "firstName" : "Jerry A.",			"sex" : "m", "born" : 1949 },
     "CoJG" : { "lastName" : "Cozzens", "firstName" : "James Gould",		"sex" : "m", "born" : 1903, "died" : 1978 },
@@ -77,6 +79,7 @@
     "CuMi" : { "lastName" : "Cunningham", "firstName" : "Michael",		"sex" : "m", "born" : 1952 },
     
     "DaCh" : { "lastName" : "Darwin", "firstName" : "Charles",			"sex" : "m", "born" : 1809, "died" : 1882 },
+    "DaEd" : { "lastName" : "Danticat", "firstName" : "Edwidge",		"sex" : "f", "born" : 1969 },
     "DaHa" : { "lastName" : "Davis", "firstName" : "Harold L.",			"sex" : "m", "born" : 1894, "died" : 1960 },
     "DaRi" : { "lastName" : "Dawkins", "firstName" : "Richard",			"sex" : "m", "born" : 1941 },
     "DaRo" : { "lastName" : "Davies", "firstName" : "Robertson",		"sex" : "m", "born" : 1913, "died" : 1995 },
@@ -175,6 +178,7 @@
     "HiOs" : { "lastName" : "Hijuelos", "firstName" : "Oscar",			"sex" : "m", "born" : 1951, "died": 2013 },
     "HoKh" : { "lastName" : "Hosseini", "firstName" : "Khaled",			"sex" : "m", "born" : 1965 },
     "HoMi" : { "lastName" : "Holley", "firstName" : "Michael",			"sex" : "m", "born" : 1970 },
+    "HoNi" : { "lastName" : "Hornby", "firstName" : "Nick",			    "sex" : "m", "born" : 1957 },
     "HoRo" : { "lastName" : "Holdstock", "firstName" : "Robert",		"sex" : "m", "born" : 1948, "died": 2009 },
     "HuAl" : { "lastName" : "Huxley", "firstName" : "Aldous",			"sex" : "m", "born" : 1894, "died": 1963 },
     "HuLR" : { "lastName" : "Hubbard", "firstName" : "L. Ron",			"sex" : "m", "born" : 1911, "died": 1986 },
@@ -209,6 +213,7 @@
     "KlPh" : { "lastName" : "Klay", "firstName" : "Phil", 				"sex" : "m" },
     "KnJo" : { "lastName" : "Knowles", "firstName" : "John", 			"sex" : "m" },
     "KoAr" : { "lastName" : "Koestler", "firstName" : "Arthur", 		"sex" : "m" },
+    "KoEl" : { "lastName" : "Kostova ", "firstName" : "Elizabeth",		"sex" : "f", "born" : 1964 },
     "KoJe" : { "lastName" : "Kosiński ", "firstName" : "Jerzy",			"sex" : "m" },
     "KrGe" : { "lastName" : "Kranz", "firstName" : "Gene", 				"sex" : "m" },
     "KrLa" : { "lastName" : "Krauss", "firstName" : "Lawrence M.", 		"sex" : "m" },
@@ -383,6 +388,7 @@
     "ToJo" : { "lastName" : "Toole", "firstName" : "John Kennedy", 		"sex" : "m" },
     "ToJR" : { "lastName" : "Tolkien", "firstName" : "J. R. R.", 		"sex" : "m" },
     "TuLi" : { "lastName" : "Tuck", "firstName" : "Lily",				"sex" : "f" },
+    "TwMa" : { "lastName" : "Twain", "firstName" : "Mark",				"sex" : "m", "born" : 1835, "died" : 1910 },
     "TyAn" : { "lastName" : "Tyler", "firstName" : "Anne",				"sex" : "f" },
     "TyNe" : { "lastName" : "Tyson", "firstName" : "Neil deGrasse", 	"sex" : "m" },
     
@@ -425,6 +431,7 @@
 
     "YaRi" : { "lastName" : "Yates", "firstName" : "Richard",			"sex" : "m" },
     "YoMa" : { "lastName" : "Yousafzai", "firstName" : "Malala", 		"sex" : "f" },
+    "YuCh" : { "lastName" : "Yu", "firstName" : "Charles",			    "sex" : "m", "born" : 1976 },
 
     "ZaRa" : { "lastName" : "Zabor", "firstName" : "Rafi",	    		"sex" : "m" }
 }

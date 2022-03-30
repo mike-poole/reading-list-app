@@ -4,6 +4,7 @@
         "abbr" : "PUL",
         "type" : "annual",
         "list" : {
+            "CW-TNB"   : 2020, 
             "RP-TO"    : 2019, "AG-L"     : 2018, "CW-TUR"   : 2017, "VN-TS"    : 2016, "AD-AtLWC" : 2015, "DT-TG"    : 2014, "AJ-TOMS"  : 2013, "[NA2012]" : 2012, "JE-AVftG" : 2011, "PH-T"     : 2010,
             "ES-OK"    : 2009, "JD-TBWLO" : 2008, "CM-TR"    : 2007, "GB-M"     : 2006, "MR-G"     : 2005, "EJ-TKW"   : 2004, "JE-M"     : 2003, "RR-EF"    : 2002, "MC-TAAoK" : 2001, "JL-IoM"   : 2000,
             "MC-TH"    : 1999, "PR-AP"    : 1998, "SM-MDTTo" : 1997, "RF-ID"    : 1996, "CS-TSD"   : 1995, "AP-TSN"   : 1994, "RB-GSfaS" : 1993, "JS-ATA"   : 1992, "JU-RaR"   : 1991, "OH-TMKPS" : 1990,
@@ -22,7 +23,8 @@
         "abbr" : "NAT",
         "type" : "annual",
         "list" : {
-            "SN-TF"    : 2018, "JW-SUS"   : 2017, "CW-TUR"   : 2016, "AJ-FS"    : 2015, "PK-R"     : 2014, "JM-TGLB"  : 2013, "LE-TRH"   : 2012, "JW-StB"   : 2011, "JG-LoM"   : 2010,
+            "CY-IC"    : 2020,
+            "SC-TE"    : 2019, "SN-TF"    : 2018, "JW-SUS"   : 2017, "CW-TUR"   : 2016, "AJ-FS"    : 2015, "PK-R"     : 2014, "JM-TGLB"  : 2013, "LE-TRH"   : 2012, "JW-StB"   : 2011, "JG-LoM"   : 2010,
             "CM-LtGWS" : 2009, "PM-SC"    : 2008, "DJ-ToS"   : 2007, "RP-TEM"   : 2006, "WV-EC"    : 2005, "LT-TNfP"  : 2004, "SH-TGF"   : 2003, "JG-TJ"    : 2002, "JF-TC"    : 2001, "SS-IM"    : 2000,
             "HJ-W"     : 1999, "AM-CB"    : 1998, "CF-CM"    : 1997, "AB-SFaOS" : 1996, "PR-ST"    : 1995, "WG-AFoHO" : 1994, "AP-TSN"   : 1993, "CM-AtPH"  : 1992, "NR-M"     : 1991, "CJ-MP"    : 1990,
             "JC-S"     : 1989, "PD-PT"    : 1988, "LH-PS"    : 1987, "ED-WF"    : 1986, "DD-WN"    : 1985, "EG-VOJ"   : 1984, "AW-TCP"   : 1983, "JU-RIR"   : 1982, "WM-PSFFV" : 1981, "WS-SC"    : 1980,
@@ -36,7 +38,7 @@
         "abbr" : "NBCC",
         "type" : "annual",
         "list" : {
-            "AB-M"     : 2018, "JS-I"     : 2017, "LE-LR"    : 2016, "PB-TS"    : 2015, "MR-L"     : 2014, "CH-A"     : 2013, "BF-BLLHW" : 2012, "EP-BVNSS" : 2011, "JE-AVftG" : 2010,
+            "ED-EI"    : 2019, "AB-M"     : 2018, "JS-I"     : 2017, "LE-LR"    : 2016, "PB-TS"    : 2015, "MR-L"     : 2014, "CH-A"     : 2013, "BF-BLLHW" : 2012, "EP-BVNSS" : 2011, "JE-AVftG" : 2010,
             "HM-WH"    : 2009, "RB-2666"  : 2008, "JD-TBWLO" : 2007, "KD-TIoL"  : 2006, "ED-TM"    : 2005, "MR-G"     : 2004, "EJ-TKW"   : 2003, "IM-At"     : 2002, "WS-A"     : 2001, "JC-BD"    : 2000,
             "JL-MB"    : 1999, "AM-TLoaG" : 1998, "PF-TBF"   : 1997, "GB-WiTB"  : 1996, "SE-MTB"   : 1995, "CS-TSD"   : 1994, "EG-ALBD"  : 1993, "CM-AtPH"  : 1992, "JS-ATA"   : 1991, "JU-RaR"   : 1990,
             "ED-BB"    : 1989, "BM-TMaOS" : 1988, "PR-TC"    : 1987, "RP-KV"    : 1986, "AT-TAT"   : 1985, "LE-LM"    : 1984, "WK-I"     : 1983, "SE-GM"    : 1982, "JU-RIR"   : 1981, "SH-TToV"  : 1980,
@@ -48,6 +50,7 @@
         "abbr" : "PENF",
         "type" : "annual",
         "list" : {
+            "CA-SM"    : 2020,
             "AV-CMZ"   : 2019, "JS-I"     : 2018, "IM-BtD"   : 2017, "JH-DF"    : 2016, "AL-PftNL" : 2015, "KF-WAACB" : 2014, "BS-EBaEa" : 2013, "JO-TBitA" : 2012, "DE-TCSoD" : 2011, "SA-WD"    : 2010,
             "JO-N"     : 2009, "KC-TGM"   : 2008, "PR-E"     : 2007, "ED-TM"    : 2006, "HJ-WT"    : 2005, "JU-TES"   : 2004, "SM-TC"    : 2003, "AP-BC"    : 2002, "PR-THS"   : 2001, "HJ-W"     : 2000,
             "MC-TH"    : 1999, "RZ-TBCH"  : 1998, "GB-WiTB"  : 1997, "RF-ID"    : 1996, "DG-SFoC"  : 1995, "PR-OS"    : 1994, "AP-P"     : 1993, "DD-MII"   : 1992, "JW-PF"    : 1991, "ED-BB"    : 1990,
@@ -85,7 +88,7 @@
             "FO-AGMIH" : 61, "FF-TItN"  : 62, "VW-OAB"   : 63, "DL-SaL"   : 64, "TW-BotV"  : 65, "KV-CC"    : 66, "JK-ASP"   : 67, "WF-LiA"   : 68, "HJ-TWotD" : 69, "CA-TFA"   : 70,
             "DD-R"     : 71, "DA-THGtG" : 72, "WB-NL"    : 73, "EW-BR"    : 74, "DL-WiL"   : 75, "TW-LHA"   : 76, "EH-IOT"   : 77, "GS-TAoAB" : 78, "DH-TMF"   : 79, "NM-TNatD" : 80,
             "JR-WSS"   : 81, "DD-WN"    : 82, "WC-OP"    : 83, "HM-ToC"   : 84, "HW-TWotW" : 85, "JC-LJ"    : 86, "HJ-TB"    : 87, "TD-AAT"   : 88, "WC-DCftA" : 89, "KG-TWitW" : 90,
-            "FF-TSoP"  : 91, "AR-AS"    : 92, "JF-TFLW"  : 93, "SL-B"     : 94, "RK-K"     : 95, "FF-TBatD" : 96, "JU-R,R"   : 97, "EF-WAFtT" : 98, "SL-MS"    : 99, "SR-MC"    : 100
+            "FF-TSoP"  : 91, "AR-AS"    : 92, "JF-TFLW"  : 93, "SL-B"     : 94, "RK-K"     : 95, "FF-TBaD"  : 96, "JU-R,R"   : 97, "EF-WAFtT" : 98, "SL-MS"    : 99, "SR-MC"    : 100
         }
     },
     "rc100" : {

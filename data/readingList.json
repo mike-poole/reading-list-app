@@ -22,12 +22,15 @@
     "2009" : [ "GW-TSofT", "GW-TCotC", "GW-TSotL", "GW-TCotA", "RW-WETHB", "JM-TBotD", "MC-TYPU", "MA-THT", "ES-OK", "DE-Z", "AC-AMonM", "CL-TLWaW", "CD-OtOoS", "PC-SoB" ],
     "2010" : [ "EG-ALBD", "MC-WB", "CM-AtPH", "CM-TC", "RD-DotM", "JC-WEIT", "CM-CotP", "RD-TBW", "JD-TBWLO", "MC-TFS", "RD-TSG", "JI-THNH", "GS-TAoRR", "SH-LtaCN", "RD-TGSoE", "SH-TCD", "BS-TR", "MS-TSoL", "LL-TDiD" ],
     "2011" : [ "PR-TPoD", "CM-CoG", "RD-TEP", "DS-CC", "KM-FDG", "SH-TEoF", "MC-SL", "TP-TAoR", "SK-TG", "SK-TDotT", "RD-UtR", "SK-TWL", "SK-WaG", "SP-TBAoO", "NT-TPF" ],
-    "2012" : [ "SK-WotC", "SS-RM", "SK-SoS", "RD-TMoR", "SK-TDT", "PH-T", "PR-TDA", "EL-TDitW", "CM-TOK", "MC-TMoP", "GB-M", "LA-LW", "JE-AVftG", "MS-TKA", "CA-TDHW", "SK-TWTtK", "CM-NCfOM", "CF-CM", "SH-L", "LK-AUfN" ],
+    "2012" : [ "SK-WotC", "SS-RM", "SK-SoS", "RD-TMoR", "SK-TDT", "PH-T", "PR-TDA", "EL-TDitW", "CM-TOK", "MC-TMoP", "GB-M", "LA-LW", "JE-AVftG", "MS-TKA", "CS-TDHW", "SK-TWTtK", "CM-NCfOM", "CF-CM", "SH-L", "LK-AUfN" ],
     "2013" : [ "RP-W", "RD-TAT", "DD-U", "AW-TCP", "SK-HiA", "MC-AMWaO", "CM-LtGWS" ],
     "2014" : [ "SK-TGWLT", "ED-R", "ED-WF", "CM-OD", "AW-FtE", "SK-J", "DM-1776", "EF-HE", "RR-TRP", "JG-TFiOS", "MY-IAM", "GM-AWU", "ER-AQotW", "SK-TSh" ],
     "2015" : [ "MR-G", "MR-TY", "TW-TBoSL", "ED-TM", "EF-ARwaV", "DD-WN", "SM-WfG", "PH-TGotT", "SK-EE", "AV-EM", "DL-SaL" ],
     "2016" : [ "MA-AG", "DT-TG", "AP-P", "AH-EiG", "SK-FaB8", "HW-TCM", "KI-TBG", "EH-GHoA", "IM-At", "PR-E", "ED-BB" ],
     "2017" : [ "WC-DCftA", "VN-TS", "OW-TPoDG", "MA-OaC", "GO-1984", "JF-EII", "CM-S", "KV-WttMH", "MC-GotR", "MC-M", "FF-TSoP", "AD-AtLWC", "IM-Am", "EW-TAoI", "CA-TFA" ],
     "2018" : [ "EP-HF", "NM-TES", "PD-DADoE", "KV-PP", "PD-TMitH", "MC-TA", "EH-MWW", "SK-OW", "JA-PaP", "WC-OP", "HH-S", "ED-TW", "IM-S", "AC-TMAaS", "EW-ToMaG" ],
-    "2019" : [ "DS-TT", "AG-L", "CM-PSS", "FF-ITSS", "CW-TUR", "DS-SoN", "DE-AHftK", "EL-InGoB", "DT-TSH", "UL-AWoE", "FF-TotJA" ]
+    "2019" : [ "DS-TT", "AG-L", "CM-PSS", "FF-ITSS", "CW-TUR", "DS-SoN", "DE-AHftK", "EL-InGoB", "DT-TSH", "UL-AWoE", "FF-TotJA" ],
+    "2020" : [ "MT-AoTS", "MT-AoHF", "KV-SH5", "CM-RS", "RP-TO", "RB-SWTWC", "SK-UTD", "NH-HF" ],
+    "2021" : [ "DS-TFH", "CW-TNB", "DS-H", "JI-TWAtG", "JA-E" ],
+    "2022" : [ "EK-TH", "CW-HS" ]
 }
