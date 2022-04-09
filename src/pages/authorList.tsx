@@ -61,7 +61,7 @@ export class AuthorList extends React.Component<Props, object> {
 				</div>
 				{store.authorList.map(author => {
 					const books = store.filter(author.booksRead);
-					return (books.length > 0 &&
+					return (books.length >= (store.filters.minBooksRead || 1) &&
 						<ExpansionPanel
 							key={`${author.key}-panel`}
 							expanded={!!this.expanded.get(author.key)}

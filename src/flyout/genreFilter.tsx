@@ -3,7 +3,6 @@ import { inject, observer } from 'mobx-react';
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import Divider from '@material-ui/core/Divider';
 import { BookAppStore } from '../bookAppStore';
 import '../styles/bookApp.scss';
 
@@ -12,7 +11,7 @@ interface Props {
 }
 
 @inject('bookAppStore') @observer
-export class GenreSelector extends React.Component<Props, object> {
+export class GenreFilter extends React.Component<Props, object> {
 
 	onChange = key => event => {
 		this.props.bookAppStore.toggleGenre(key);
@@ -22,8 +21,7 @@ export class GenreSelector extends React.Component<Props, object> {
 		const { bookAppStore: store } = this.props;
 		return (
 			<div className='flyoutSection'>
-				<span className='heading'>Show Genres</span>
-				<Divider/>
+				<div className='heading'>Genre</div>
 				<FormGroup classes={{root: 'checkboxList'}}>
 				{ Array.from(store.genreInfo.values()).map(genre =>
 					<FormControlLabel

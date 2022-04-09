@@ -111,7 +111,6 @@ $flyoutWidth: 15.5rem;
 			width: 100%;
 			font-size: 1.5rem;
 			font-weight: 500;
-			text-shadow: 1px 1px darkgray;
 			display: flex;
 		}
 		.summaryRight {
@@ -134,17 +133,24 @@ $flyoutWidth: 15.5rem;
 .flyoutPaper {
 	padding: 0.5rem 1rem;
 	width: $flyoutWidth;
+	background-color: #F8F8F8 !important;
 	.flyoutHeader {
 		display: flex;
 		justify-content: flex-end;
 	}
+	.sectionHeading {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 1.2rem;
+		padding: 0.5rem 0;
+	}
 	.heading {
 		font-family: Arial, Helvetica, sans-serif;
 		font-size: 1rem;
-		padding: 0.5rem 0;
+		padding: 0.5rem 0 0 1rem;
 	}
 	.checkboxList {
 		padding-top: 0.2rem;
+		padding-left: 1rem;
 		label {
 			margin-left: 0;
 			span:first-child {
@@ -163,15 +169,26 @@ $flyoutWidth: 15.5rem;
 		}
 	}
 	.flyoutSection {
-		padding-bottom: 2rem;
+		padding-bottom: 1rem;
 	}
 	.rangeContainer {
 		font-family: Arial, Helvetica, sans-serif;
 		font-size: 0.8rem;
-		margin-top: 0.5rem;
+		margin-left: 1rem;
 		.rangeLabel {
 			padding: 0.5rem 0 0;
+			align-self: center;
+			width: 2.5rem;
 		}
+		.labeledInput {
+			width: 9.5rem;
+		}
+		.unlabeledInput {
+			width: 12rem;
+		}
+	}
+	.dateRange {
+		display: inline-flex
 	}
 }
 

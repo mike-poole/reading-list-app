@@ -4,9 +4,11 @@ import { observer } from 'mobx-react';
 import Drawer from '@material-ui/core/Drawer';
 import IconButton from '@material-ui/core/IconButton';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import { AuthorNameFilter } from './authorNameFilter';
+import { GenreFilter } from './genreFilter';
+import { MinBooksReadFilter } from './minBooksReadFilter';
+import { YearRangeFilter } from './yearRangeFilter';
 import { AwardSelector } from './awardSelector';
-import { GenreSelector } from './genreSelector';
-import { YearRangeSelector } from './yearRangeSelector';
 import '../styles/bookApp.scss';
 
 interface Props {
@@ -40,8 +42,12 @@ export class FlyoutMenu extends React.Component<Props, object> {
 				classes={{paper: 'flyoutPaper'}}
 			>
 				{this.renderHeader()}
-				<GenreSelector/>
-				<YearRangeSelector/>
+				<div className="sectionHeading">Filters</div>
+				<GenreFilter/>
+				<YearRangeFilter/>
+				<AuthorNameFilter/>
+				<MinBooksReadFilter/>
+				<div className="sectionHeading">Tags</div>
 				<AwardSelector/>
 			</Drawer>
 		);

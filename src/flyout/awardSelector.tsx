@@ -3,7 +3,6 @@ import { inject, observer } from 'mobx-react';
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import Divider from '@material-ui/core/Divider';
 import { BookAppStore } from '../bookAppStore';
 import '../styles/bookApp.scss';
 
@@ -22,8 +21,6 @@ export class AwardSelector extends React.Component<Props, object> {
 		const { bookAppStore: store } = this.props;
 		return (
 			<div className='flyoutSection'>
-				<span className='heading'>Tag Awards</span>
-				<Divider/>
 				<FormGroup classes={{root: 'checkboxList'}}>
 				{ store.awardList.map(award =>
 					<FormControlLabel

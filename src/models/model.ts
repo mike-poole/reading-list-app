@@ -101,6 +101,8 @@ export interface FilterModel {
 	genre?: {};
 	yearStart?: number;
 	yearEnd?: number;
+	authorName?: string;
+	minBooksRead?: number;
 }
 
 export enum AwardType {

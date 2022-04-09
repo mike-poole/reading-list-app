@@ -168,6 +168,14 @@ export class BookAppStore {
 		return this.filters.yearEnd || 3000;
 	}
 
+	filterAuthorName = (book: BookInfoModel): boolean => {
+		return this.filters.authorName ? book.authorName.toLowerCase().includes(this.filters.authorName.toLowerCase()) : true;
+	}
+
+	filterAuthorBooksRead = (book: BookInfoModel): boolean => {
+		return this.authorsByMinBooksRead.map(author => author.key).some(key => book.authorKeys.includes(key));
+	}
+
 	@computed
 	get filteredBooks() {
 		const books = Array.from(this.bookInfo.values())
@@ -179,7 +187,9 @@ export class BookAppStore {
 		return books
 			.filter(book => this.filters.genre[book.genre])
 			.filter(book => book.year >= this.filterYearStart)
-			.filter(book => book.year <= this.filterYearEnd);
+			.filter(book => book.year <= this.filterYearEnd)
+			.filter(book => this.filterAuthorName(book))
+			.filter(book => this.filterAuthorBooksRead(book));
 	}
 
 	@computed
@@ -199,6 +209,12 @@ export class BookAppStore {
 		const readAuthors = Array.from(this.authorInfo.values()).filter(author => author.read);
 		readAuthors.sort((a, b) => a.alphaName < b.alphaName ? -1 : 1);
 		return readAuthors;
+	}
+
+	@computed 
+	get authorsByMinBooksRead(): AuthorInfoModel[] {
+		const minBooksRead = this.filters.minBooksRead || 0;
+		return this.authorList.filter(author => this.authorInfo.get(author.key).booksRead.length >= minBooksRead);
 	}
 
 	@computed
@@ -227,6 +243,16 @@ export class BookAppStore {
 	@action
 	setYearEndFilter(year: number) {
 		this.filters.yearEnd = year;
+	}
+
+	@action
+	setAuthorNameFilter(name: string) {
+		this.filters.authorName = name;
+	}
+
+	@action
+	setAuthorBooksReadFilter(booksRead: number) {
+		this.filters.minBooksRead = booksRead;
 	}
 
 	getBook(bookKey: string): BookInfoModel {
