@@ -279,7 +279,8 @@ export class BookAppStore {
 	getBookAwards(bookKey: string): string[] {
 		let awards: string[] = [];
 		this.awardInfo.forEach(award => {
-			if (award.books[bookKey]) {
+			const inAward = Object.values(award.books).some(books => books.includes(bookKey));
+			if (inAward) {
 				awards.push(award.key);
 			}
 		});

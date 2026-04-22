@@ -11,7 +11,7 @@ export interface AwardData {
 	name: string;
 	abbr: string;
 	type: AwardType;
-	list: []
+	list: { [key: string]: string[] }
 }
 
 export interface AuthorData {
@@ -51,7 +51,7 @@ export interface AwardInfoModel {
 	key: string;
 	name: string;
 	type: AwardType;
-	books: [];
+	books: { [key: string]: string[] };
 }
 
 export interface AuthorInfoModel {

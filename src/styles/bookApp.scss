@@ -52,9 +52,10 @@ $flyoutWidth: 15.5rem;
 	}
 
 	svg {
-		width: 1rem;
-		height: 1rem;
+		width: 1.2rem;
+		height: 1.2rem;
 		margin-right: 0.5rem;
+		vertical-align: bottom;
 	}
 
 	svg .particallyRead {
@@ -65,7 +66,8 @@ $flyoutWidth: 15.5rem;
 .book.noEntry {
 	font-family: 'Times New Roman', Times, serif;
 	font-size: 1.15rem;
-	color: gray;
+	font-style: italic;
+	color: lightgray;
 
 	svg {
 		visibility: hidden;
@@ -116,7 +118,7 @@ $flyoutWidth: 15.5rem;
 		.summaryRight {
 			display: flex;
 			font-size: 1.2rem;
-			padding-right: 0;
+			padding-right: 1rem;
 		}
 	}
 	.expansionDetailsRoot {
@@ -234,4 +236,15 @@ $flyoutWidth: 15.5rem;
 .awardSummary {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	font-size: 1rem;
+}
+
+.awardEntry {
+	display: flex;
+	align-items: flex-start;
+	.awardYear {
+		padding-right: 0.7rem;
+		padding-top: 0.4rem;
+		width: 2rem;
+		text-align: end;
+	}
 }
