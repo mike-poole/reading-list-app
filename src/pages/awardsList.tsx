@@ -1,5 +1,5 @@
 import React from 'react';
-import { observable, action, computed } from 'mobx';
+import { observable, action, computed, makeObservable } from 'mobx';
 import { inject, observer } from 'mobx-react';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
@@ -15,6 +15,11 @@ interface Props {
 export class AwardsList extends React.Component<Props, object> {
 
 	@observable currentAward = 'PUL';
+
+	constructor(props: Props) {
+		super(props);
+		makeObservable(this);
+	}
 
 	@action.bound
 	onChangeAward(event) {

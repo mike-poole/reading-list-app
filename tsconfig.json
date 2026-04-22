@@ -5,8 +5,11 @@
 		"jsx": "preserve",
 		"allowSyntheticDefaultImports": true,
 		"experimentalDecorators": true,
-		"moduleResolution": "node",
+		"moduleResolution": "bundler",
 		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"noImplicitAny": false,
+		"strictNullChecks": false,
 		"lib": [
 			"es2017", "dom"
 		]

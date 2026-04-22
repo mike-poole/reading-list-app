@@ -1,10 +1,10 @@
 import React from 'react';
-import { observable, action, computed } from 'mobx';
+import { observable, action, computed, makeObservable } from 'mobx';
 import { inject, observer } from 'mobx-react';
 import Button from '@material-ui/core/Button';
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
 import { BookAppStore } from '../bookAppStore';
 import { Book } from '../components/book';
 import { SummaryAwardTags } from '../components/awardTags';
@@ -19,6 +19,11 @@ interface Props {
 export class AuthorList extends React.Component<Props, object> {
 
 	@observable expanded: Map<string, boolean> = new Map();
+
+	constructor(props: Props) {
+		super(props);
+		makeObservable(this);
+	}
 
 	componentDidMount() {
 		const { bookAppStore: store } = this.props;
@@ -62,13 +67,13 @@ export class AuthorList extends React.Component<Props, object> {
 				{store.authorList.map(author => {
 					const books = store.filter(author.booksRead);
 					return (books.length >= (store.filters.minBooksRead || 1) &&
-						<ExpansionPanel
+						<Accordion
 							key={`${author.key}-panel`}
 							expanded={!!this.expanded.get(author.key)}
 							classes={{root: 'expansionPanel'}}
 							onChange={this.onClickPanel(author.key)}
 						>
-							<ExpansionPanelSummary>
+							<AccordionSummary>
 								<div className="summaryLeft">{author.alphaName}</div>
 								<div className="summaryRight">
 									<SummaryAwardTags id={author.key} books={author.booksRead}/>
@@ -80,8 +85,8 @@ export class AuthorList extends React.Component<Props, object> {
 										<div>&nbsp;</div>
 									</Badge>
 								</div>
-							</ExpansionPanelSummary>
-							<ExpansionPanelDetails classes={{root: 'expansionDetailsRoot'}}>
+							</AccordionSummary>
+							<AccordionDetails classes={{root: 'expansionDetailsRoot'}}>
 								<div className="expansionDetails">
 									{books.map(book => {
 										return (
@@ -89,8 +94,8 @@ export class AuthorList extends React.Component<Props, object> {
 										)
 									})}
 								</div>
-							</ExpansionPanelDetails>
-						</ExpansionPanel>
+							</AccordionDetails>
+						</Accordion>
 					)
 				})}
 			</div>

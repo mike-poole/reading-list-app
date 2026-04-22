@@ -1,5 +1,5 @@
 import React from 'react';
-import { computed, observable, action, autorun } from 'mobx';
+import { computed, observable, action, autorun, makeObservable } from 'mobx';
 import { AwardData, AuthorData, BookData, GenreData, SeriesData,
 	BookInfoModel, AuthorInfoModel, ReadingListInfo, SeriesInfoModel, GenreInfoModel, AwardInfoModel,
 	BookSeriesInfoModel, FilterModel, GenreType } from './models/model';
@@ -22,6 +22,7 @@ export class BookAppStore {
 	@observable filters: FilterModel = {};
 	
 	constructor() {
+		makeObservable(this);
 
 		this.filters.award = {};  // map of string -> boolean
 		this.filters.genre = {};  // map of GenreKey -> boolean

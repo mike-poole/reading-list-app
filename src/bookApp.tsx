@@ -1,5 +1,5 @@
 import React from 'react';
-import { observable, action } from 'mobx';
+import { observable, action, makeObservable } from 'mobx';
 import { Provider, observer } from 'mobx-react';
 import classNames from 'classnames';
 import AppBar from '@material-ui/core/AppBar';
@@ -29,6 +29,7 @@ export class BookApp extends React.Component<Props, object> {
 
 	constructor(props) {
 		super(props);
+		makeObservable(this);
 		this.store = new BookAppStore();
 	}
 

@@ -1,5 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { BookApp } from './bookApp';
 
-ReactDOM.render(<BookApp/>, document.getElementById('index'));
+const container = document.getElementById('index');
+const root = createRoot(container);
+root.render(<BookApp/>);

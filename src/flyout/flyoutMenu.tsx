@@ -1,5 +1,5 @@
 import React from 'react';
-import { observable } from 'mobx';
+import { observable, makeObservable } from 'mobx';
 import { observer } from 'mobx-react';
 import Drawer from '@material-ui/core/Drawer';
 import IconButton from '@material-ui/core/IconButton';
@@ -20,6 +20,11 @@ interface Props {
 export class FlyoutMenu extends React.Component<Props, object> {
 
 	@observable drawerOpen = false;
+
+	constructor(props: Props) {
+		super(props);
+		makeObservable(this);
+	}
 
 	renderHeader() {
 		return (
