@@ -4,7 +4,7 @@
         "abbr" : "PUL",
         "type" : "annual",
         "list" : {
-            "CW-TNB"   : 2020, 
+            "JP-NW"    : 2024, "HD-T"     : 2023, "JC-TN"    : 2022, "LE-TNW"   : 2021, "CW-TNB"   : 2020, 
             "RP-TO"    : 2019, "AG-L"     : 2018, "CW-TUR"   : 2017, "VN-TS"    : 2016, "AD-AtLWC" : 2015, "DT-TG"    : 2014, "AJ-TOMS"  : 2013, "[NA2012]" : 2012, "JE-AVftG" : 2011, "PH-T"     : 2010,
             "ES-OK"    : 2009, "JD-TBWLO" : 2008, "CM-TR"    : 2007, "GB-M"     : 2006, "MR-G"     : 2005, "EJ-TKW"   : 2004, "JE-M"     : 2003, "RR-EF"    : 2002, "MC-TAAoK" : 2001, "JL-IoM"   : 2000,
             "MC-TH"    : 1999, "PR-AP"    : 1998, "SM-MDTTo" : 1997, "RF-ID"    : 1996, "CS-TSD"   : 1995, "AP-TSN"   : 1994, "RB-GSfaS" : 1993, "JS-ATA"   : 1992, "JU-RaR"   : 1991, "OH-TMKPS" : 1990,

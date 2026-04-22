@@ -1,5 +1,5 @@
 import React from 'react';
-import { observable, action, computed, makeObservable } from 'mobx';
+import { observable, action, makeObservable } from 'mobx';
 import { inject, observer } from 'mobx-react';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
@@ -26,20 +26,6 @@ export class AwardsList extends React.Component<Props, object> {
 		this.currentAward = event.target.value;
 	}
 
-	@computed
-	get worksTotal() {
-		const { bookAppStore: store } = this.props;
-		return Object.keys(store.awardInfo.get(this.currentAward).books).length;
-	}
-
-	@computed
-	get worksRead() {
-		const { bookAppStore: store } = this.props;
-		return Object.keys(store.awardInfo.get(this.currentAward).books).reduce(
-			(total, work) => total + store.getWasRead(work), 0
-		);
-	}
-
 	renderWork(key: string) {
 		const { bookAppStore: store } = this.props;
 		if (key.indexOf('[NA') >= 0) {
@@ -62,6 +48,10 @@ export class AwardsList extends React.Component<Props, object> {
 	render() {
 
 		const { bookAppStore: store } = this.props;
+		const worksTotal = Object.keys(store.awardInfo.get(this.currentAward).books).length;
+		const worksRead = Object.keys(store.awardInfo.get(this.currentAward).books).reduce(
+			(total, work) => total + store.getWasRead(work), 0
+		);
 
 		return (
 			<React.Fragment>
@@ -76,7 +66,7 @@ export class AwardsList extends React.Component<Props, object> {
 					)}
 				</Select>
 				<p className="awardSummary">
-					{this.worksRead} of {this.worksTotal} read ({Math.round(this.worksRead / this.worksTotal * 100)}%)
+					{worksRead} of {worksTotal} read ({Math.round(worksRead / worksTotal * 100)}%)
 				</p>
 				{Object.keys(store.awardInfo.get(this.currentAward).books).map(bookKey =>
 					<div key={bookKey}>

@@ -32,5 +32,9 @@
     "2019" : [ "DS-TT", "AG-L", "CM-PSS", "FF-ITSS", "CW-TUR", "DS-SoN", "DE-AHftK", "EL-InGoB", "DT-TSH", "UL-AWoE", "FF-TotJA" ],
     "2020" : [ "MT-AoTS", "MT-AoHF", "KV-SH5", "CM-RS", "RP-TO", "RB-SWTWC", "SK-UTD", "NH-HF" ],
     "2021" : [ "DS-TFH", "CW-TNB", "DS-H", "JI-TWAtG", "JA-E" ],
-    "2022" : [ "EK-TH", "CW-HS" ]
+    "2022" : [ "EK-TH", "CW-HS", "SJ-WHALI", "EH-AMF", "SC-MAGoS", "CW-SH" ],
+    "2023" : [ "JC-TN", "CM-TP", "CM-SM", "NG-N", "KI-KatS", "CM-TSL", "PD-ASD", "SJ-THoHH", "DB-WWS", "AD-CCL", "AD-TAoSH", "LE-TNW", "WI-TLoSH", "HW-TTM", "PH-TOE" ],
+    "2024" : [ "KI-N", "JE-TCH", "CM-TSM", "JC-HoD", "HD-T", "BK-DC", "MC-WiTY", "FK-TM", "MB-ZD", "MA-TBA", "MA-WT", "AJ-TOMS" ],
+    "2025" : [ "JH-ABfA", "TM-B", "JP-NW", "VW-MD", "CW-CM", "PD-U", "CM-TGS", "CM-TS", "DT-TLF", "SL-A", "EH-TSaTP", "EH-TSoK" ],
+    "2026" : [ "JW-S", "KV-MN", "CW-ZO", "ED-HaL" ]
 }
